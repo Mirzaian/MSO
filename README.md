@@ -11,7 +11,7 @@ Here is a short introduction how to install and develop the application on a win
 ### Prerequisites
 
 First of all we need Node.js and npm.
-Install desired Nodejs version. (v14.16.1)
+Install desired Nodejs version. (nodejs v14.16.1 / npm v6.14.12)
 * Step 1
   ```sh
   https://nodejs.org/
