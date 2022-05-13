@@ -43,6 +43,10 @@ Now we go step for step, how to install the project.
    npm install
    ```
 
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Usage
 
@@ -54,7 +58,8 @@ It's also possible to manually change the status of the respective servers via t
 
 ## Support
 
-If you have any questions, please contact the respective team members.
+If you have any questions, please contact the respective team members.<br>
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.<br>
 This project was created with the help of the library [Telekom Scale](https://github.com/telekom/scale) by [Telekom Brand-Design ](https://www.brand-design.telekom.com/)
 
 
