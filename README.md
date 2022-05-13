@@ -11,7 +11,7 @@ Here is a short introduction how to install and develop the application on a win
 ### Prerequisites
 
 First of all we need Node.js and npm.
-Install desired Nodejs version.
+Install desired Nodejs version. (v14.16.1)
 * Step 1
   ```sh
   https://nodejs.org/
@@ -28,9 +28,9 @@ Install desired Nodejs version.
 
 Now we go step for step, how to install the project.
 
-1. Now start the Terminal and we install the used framework Angular to get the project work.
+1. Now start the Terminal and we install the used framework Angular to get the project work.(based on version 12.0.5)
    ```sh
-   npm install @angular/cli
+   npm install @angular/cli 12.0.5
    ```
 2. In the next step, we clone the repo
    ```sh
