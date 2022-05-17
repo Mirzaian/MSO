@@ -1,0 +1,17 @@
+{
+  "header": {
+    "language.english": "English",
+    "language.german": "German"
+  },
+  "login": {
+    "login_headline": "Welcome to",
+    "login_headline-ultra": "MSO",
+    "login-form_top-line": "Please login to view this content.",
+    "login-label-mail": "Username",
+    "login-label-password": "Password",
+    "login-label-forgot-password": "Password forgotten?",
+    "login-submit": "Login",
+    "login-successful": "Successful login!",
+    "notification-message": "Hint: Login with your domain password (EMEA1/EMEA2) or as external with ZAM password"
+  }
+}

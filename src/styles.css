@@ -1,0 +1,47 @@
+@import url('@telekom/design-tokens/dist/telekom/css/telekom-design-tokens.all.css');
+
+html,
+body {
+  font-family: var(--telekom-typography-font-family-sans);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  width: 100%;
+}
+.center {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.tv-Center {
+  text-align: center;
+}
+.notifi-p {
+  height: 200px;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+.db {
+  display: block;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-5 {
+  margin-bottom: 10px;
+}
+.mt-40 {
+  margin-top: 40px;
+}
+.pull-right {
+  float: right;
+}
+
+
