@@ -1,0 +1,18 @@
+<div class="content center">
+  <h1 class="login_headline">
+    {{  'login.login_headline' | translate  }}<br>
+    <span class="login_headline-ultra">{{  'login.login_headline-ultra' | translate  }}</span>
+  </h1>
+  <p class="login-form_top-line mt-40 mb-30">
+    {{ 'login.login-form_top-line' | translate }}
+  </p>
+  <div class="login-form">
+    <scale-notification-message class="mb-30 db tv-Center" opened> {{  'login.notification-message' | translate  }}</scale-notification-message>
+    <scale-text-field class="mb-30 db" label="{{ 'login.login-label-mail' | translate }}" placeholder="Max.mustermann@telekom.de" type="email" required="true" [(ngModel)]="email"></scale-text-field>
+    <scale-text-field class="mb-30 db" label="{{ 'login.login-label-password' | translate }}" type="password" required="true" [(ngModel)]="password"></scale-text-field>
+    <scale-button class="pull-right" id="submit" (click)="login()">{{  'login.login-submit' | translate  }}</scale-button>
+    <scale-notification-banner variant="success">
+      {{  'login.login-successful' | translate  }}
+    </scale-notification-banner>
+  </div>
+
