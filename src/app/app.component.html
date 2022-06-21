@@ -1,22 +1,3 @@
-<body>
-  <scale-app-shell>
-    <scale-app-header slot="header" id="header">
-      <div slot="logo">
-        <scale-logo
-        transparent variant="white" language="de" href="#" logo-title="Miniplan"
-        styles=":host { --logo-size: 43px;} @media (max-width: 1024px) { :host {--logo-size: 43px;} }">
-        </scale-logo>
-      </div>
-      <div slot="menu-addon">
-        <scale-nav-segment is-active="{{ currentLanguage == 'de-DE' }}" (click)="selectLanguage('de-DE')">
-          {{ 'header.language.german' | translate }}
-        </scale-nav-segment>
-        <scale-nav-segment is-active="{{ currentLanguage == 'en-US' }}" (click)="selectLanguage('en-US')">
-          {{ 'header.language.english' | translate }}
-        </scale-nav-segment>
-      </div>
-    </scale-app-header>
-    <router-outlet></router-outlet>
-    <app-footer slot="footer"></app-footer>
-  </scale-app-shell>
-</body>
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

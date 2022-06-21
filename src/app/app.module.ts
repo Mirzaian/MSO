@@ -14,6 +14,8 @@ import { NotificationBannerComponent } from './notification-banner/notification-
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HeaderComponent } from './header/header.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json' );
@@ -29,7 +31,9 @@ const routing: Routes = [
     FooterComponent,
     LoginComponent,
     IndexComponent,
-    NotificationBannerComponent
+    NotificationBannerComponent,
+    HeaderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     RouterModule.forRoot(routing),

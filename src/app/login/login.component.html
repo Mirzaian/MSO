@@ -8,11 +8,8 @@
   </p>
   <div class="login-form">
     <scale-notification-message class="mb-30 db tv-Center" opened> {{  'login.notification-message' | translate  }}</scale-notification-message>
-    <scale-text-field class="mb-30 db" label="{{ 'login.login-label-mail' | translate }}" placeholder="Max.mustermann@telekom.de" type="email" required="true" [(ngModel)]="email"></scale-text-field>
-    <scale-text-field class="mb-30 db" label="{{ 'login.login-label-password' | translate }}" type="password" required="true" [(ngModel)]="password"></scale-text-field>
+    <scale-input class="mb-30 db" label="{{ 'login.login-label-mail' | translate }}" placeholder="Max.mustermann@telekom.de" type="email" required="true" [(ngModel)]="email"></scale-input>
+    <scale-input class="mb-30 db" label="{{ 'login.login-label-password' | translate }}" type="password" required="true" [(ngModel)]="password"></scale-input>
     <scale-button class="pull-right" id="submit" (click)="login()">{{  'login.login-submit' | translate  }}</scale-button>
-    <scale-notification-banner variant="success">
-      {{  'login.login-successful' | translate  }}
-    </scale-notification-banner>
   </div>
 

@@ -1,7 +1,6 @@
-import { invalid } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ScaleAlert, ScaleIconAlertSuccess, ScaleNotificationBanner, ScaleToast } from '@telekom/scale-components-angular';
+import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -11,15 +10,19 @@ import { ScaleAlert, ScaleIconAlertSuccess, ScaleNotificationBanner, ScaleToast 
 export class LoginComponent implements OnInit {
   email!: string;
   password!: string;
-  constructor() { }
+  constructor(private router: Router, private userService:UserService ) {}
 
   ngOnInit() {
   }
 
   login(){
+    console.log(this.email),
+    console.log(this.password)
     if(this.email == "miniplan" && this.password == "123456")
     {
-      window.location.href = "/index"
+      this.router.navigate(['/index'])
+      this.userService.isUserLoggedIn$.next(true)
+      localStorage.setItem('loginStatus', 'true')
     }
     else {
     }
