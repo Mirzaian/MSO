@@ -1,25 +1,5 @@
-<scale-app-header slot="header" id="header">
-    <div slot="logo">
-    <scale-logo
-    transparent variant="white" language="de" href="#" logo-title="Miniplan"
-    styles=":host { --logo-size: 43px;} @media (max-width: 1024px) { :host {--logo-size: 43px;} }">
-    </scale-logo>
-    </div>
-    <div slot="menu-main" *ngIf="isUserLoggedIn==true">
-        <scale-nav-main name="Kategorie1"></scale-nav-main>
-        <scale-nav-main name="Kategorie1"></scale-nav-main>
-        <scale-nav-main name="Kategorie1"></scale-nav-main>
-        <scale-nav-main name="Kategorie1"></scale-nav-main>
-    </div>
-    <div slot="menu-icon" *ngIf="isUserLoggedIn==true">
-        <scale-nav-icon icon="action-mute" (click)="logout()"></scale-nav-icon>
-    </div>
-    <div slot="menu-addon">
-    <scale-nav-segment is-active="{{ currentLanguage == 'de-DE' }}" (click)="selectLanguage('de-DE')">
-        {{ 'header.language.german' | translate }}
-    </scale-nav-segment>
-    <scale-nav-segment is-active="{{ currentLanguage == 'en-US' }}" (click)="selectLanguage('en-US')">
-        {{ 'header.language.english' | translate }}
-    </scale-nav-segment>
-    </div>
+<scale-app-header slot="header" id="header" 
+[mainNavigation]="isUserLoggedIn?mainNavigation:[]" 
+[iconNavigation]="isUserLoggedIn?iconNavigation:[]"
+[sectorNavigation]="languageNavigation">
 </scale-app-header>
