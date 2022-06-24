@@ -1,5 +1,3 @@
-import { trigger } from '@angular/animations';
-import { ChangeDetectionStrategy } from '@angular/compiler/src/compiler_facade_interface';
 import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { UserService } from '../services/user.service';
@@ -15,87 +13,43 @@ export class HeaderComponent implements OnInit {
 
   mainNavigation = [
     {
-      name: "Topic One",
-      id: "Topic One",
-      children: [
-        {
-          name: "Second Level",
-          id: "Second Level 3",
-          children: [
-            { name: "Third Level", id: "Third Level 4", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 5", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 6", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 7", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 8", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 9", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 10", href: "#third-level" },
-          ],
-        },
-        {
-          name: "Second Level",
-          id: "Second Level 4",
-          children: [
-            { name: "Third Level", id: "Third Level 11", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 12", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 13", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 14", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 15", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 16", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 17", href: "#third-level" },
-          ],
-        },
-        {
-          name: "Second Level",
-          id: "Second Level 5",
-          children: [
-            { name: "Third Level", id: "Third Level 18", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 19", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 20", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 21", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 22", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 23", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 24", href: "#third-level" },
-          ],
-        },
-        {
-          name: "Second Level",
-          id: "Second Level 6",
-          children: [
-            { name: "Third Level", id: "Third Level 25", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 26", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 27", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 28", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 29", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 30", href: "#third-level" },
-          ],
-        },
-        { name: "Second Level", id: "Second Level 7" },
-      ],
+      name: "Startseite",
+      id: "index",
+      children: [],
     },
+      
     {
-      name: "Topic Two",
-      id: "Topic Two",
+      name: "Monitoring",
+      id: "overview",
       children: [
         {
-          name: "Second Level",
-          id: "Second Level 1",
+          name: "Dashboard",
+          id: "oberview-1",
           children: [
-            { name: "Third Level", id: "Third Level 1", href: "#third-level" },
-            { name: "Third Level", id: "Third Level 2", href: "#third-level" },
+            { name: "Overview", id: "Third Level 4", href: "#third-level" },
           ],
         },
         {
-          name: "Second Level",
+          name: "Basic checks",
           id: "Second Level 2",
           children: [
-            { name: "Third Level", id: "Third Level 3", href: "#third-level" },
+            { name: "Uptime", id: "Third Level 3", href: "#third-level" },
+          ],
+        },
+        {
+          name: "Advanced checks",
+          id: "Second Level 2",
+          children: [
+            { name: "Page Speed", id: "Third Level 3", href: "#third-level" },
+            { name: "Transaction", id: "Third Level 3", href: "#third-level" },
           ],
         },
       ],
     },
-    { name: "Topic Three", id: "Topic Three", href: "#topic-three" },
-    { name: "Topic Four", id: "Topic Four", href: "#topic-four" },
-    { name: "Topic Five", id: "Topic Five", href: "#topic-five" },
+    { name: "Reports", id: "Topic Three", href: "#topic-three" },
+    { name: "Sharing", id: "Topic Four", href: "#topic-four" },
+    { name: "Integrations", id: "Topic Five", href: "#topic-five" },
+    { name: "Updates", id: "Topic Five", href: "#topic-five" },
   ];
 
   languageNavigation = [

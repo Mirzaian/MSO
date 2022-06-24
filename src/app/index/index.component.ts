@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
+  categories = ["Windows Server", "Linux Server", "Server", "Server"]
+
   constructor() { }
 
   ngOnInit(): void {

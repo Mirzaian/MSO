@@ -27,6 +27,15 @@ scale-notification-toast::part(base --opened) {
 .db {
   display: block;
 }
+.ib {
+  display: inline-block;
+}
+.fr {
+  float: right;
+}
+.mw-200 {
+  max-width: 200px
+}
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -38,6 +47,9 @@ scale-notification-toast::part(base --opened) {
 }
 .mt-40 {
   margin-top: 40px;
+}
+.mt-100 {
+  margin-top: 100px;
 }
 .pull-right {
   float: right;
