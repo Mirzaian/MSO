@@ -1,5 +1,7 @@
 <scale-app-header slot="header" id="header" 
-[mainNavigation]="isUserLoggedIn?mainNavigation:[]" 
+[mainNavigation]="isUserLoggedIn?mainNavigation:[]"
+[sectorNavigation]="languageNavigation"
 [iconNavigation]="isUserLoggedIn?iconNavigation:[]"
-[sectorNavigation]="languageNavigation">
+[userNavigation]="isUserLoggedIn?userNavigation:[]"
+[activeSectorId]="currentLanguage">
 </scale-app-header>

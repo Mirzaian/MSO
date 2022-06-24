@@ -44,7 +44,7 @@ const routing: Routes = [
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'en-US',
+      defaultLanguage: 'de-DE',
       loader: {
       provide: TranslateLoader,
       useFactory: HttpLoaderFactory,

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +11,7 @@ export class AppComponent {
   }
 
   currentLanguage: string = 'de-DE';
+  autoHide: boolean = false;
 
-  constructor(private translateService: TranslateService) {
-    translateService.onLangChange.subscribe((languageSettings)=>this.currentLanguage = languageSettings.lang)
-  }
-
-  public selectLanguage(event: string) {
-    this.translateService.use(event);
-  }
+  constructor(){}
 }

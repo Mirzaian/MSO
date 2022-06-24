@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { trigger } from '@angular/animations';
+import { ChangeDetectionStrategy } from '@angular/compiler/src/compiler_facade_interface';
+import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { UserService } from '../services/user.service';
 
@@ -8,6 +10,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  showOutMenu: boolean = false;
 
   mainNavigation = [
     {
@@ -93,21 +97,32 @@ export class HeaderComponent implements OnInit {
     { name: "Topic Four", id: "Topic Four", href: "#topic-four" },
     { name: "Topic Five", id: "Topic Five", href: "#topic-five" },
   ];
-  
-  iconNavigation = [
-    { name: "Log Out", id: "Logout", href: "#", onClick: () => {this.logout()}, icon: "user-file-user" },
-    { name: "Log in", id: "LogIn", href: "#", onClick: () => {this.logout()}, icon: "action-mute" }
-  ];
 
   languageNavigation = [
-    { name: "Deutsch", onClick: () => {this.selectLanguage("de-DE")}},
-    { name: "Englisch", onClick: () => {this.selectLanguage("en-US")}}
+    { name: "Deutsch", id: "de-DE", onClick: () => {this.ngZone.run(()=> {this.selectLanguage("de-DE")})}},
+    { name: "Englisch", id: "en-US", onClick: () => {this.ngZone.run(()=> {this.selectLanguage("en-US")})}}
+  ];
+
+  iconNavigation = [
+    { name: "Search", id: "search", icon: "action-search" },
+  ];
+  
+
+  userNavigation = [
+    { type: 'userInfo', shortName: 'Kevin', name: 'Kevin Mirzaian', email: 'k.mirzaian@telekom.de'},
+    { type: 'divider'},
+    { type: 'item', name: 'Account Informationen', id: 'user-care', href: '/user-info', onClick: () => {}, icon: 'user-file-user', iconPosition: 'prefix' },
+    { type: 'item', name: 'Einstellungen', id: 'login-settings', href: '/settings', onClick: () => {}, icon: 'service-settings', iconPosition: 'prefix' },
+    { type: 'divider'},
+    { type: 'item', name: 'Kundenservice', id: 'user-support', href: '/support', onClick: () => {}, icon: 'service-support', iconPosition: 'prefix'  },
+    { type: 'divider' },
+    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout()}, href: '#', variant: 'secondary'},
   ];
 
   currentLanguage: string = 'de-DE';
   isUserLoggedIn: boolean = false;
 
-  constructor(private translateService: TranslateService, private userService:UserService) {
+  constructor(private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService:UserService) {
     translateService.onLangChange.subscribe((languageSettings)=>{
       this.currentLanguage = languageSettings.lang;
       this.languageNavigation[0].name=this.translateService.instant("header.language.german");
@@ -118,7 +133,8 @@ export class HeaderComponent implements OnInit {
 
   public selectLanguage(event: string) {
     this.translateService.use(event);
-    console.log(event)
+    this.cdf.markForCheck();
+    console.log(event);
   }
 
   ngOnInit(): void {
