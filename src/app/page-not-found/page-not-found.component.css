@@ -1,0 +1,17 @@
+.warning_headline {
+    text-align: center;
+    color: var(--telekom-color-text-and-icon-standard);
+    font-size: var(--telekom-typography-font-size-title-2);
+    font-weight: var(--telekom-typography-font-weight-thin);
+}
+.warning-form_top-line {
+text-align: center;
+color: var(--telekom-color-text-and-icon-standard);
+font-size: var(--telekom-typography-font-size-callout);
+}
+.warning-form_search-line {
+text-align: center;
+color: var(--telekom-color-text-and-icon-standard);
+font-size: var(--telekom-typography-font-size-callout);
+font-weight: var(--telekom-typography-font-weight-bold);
+}

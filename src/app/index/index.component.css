@@ -1,4 +1,4 @@
-.row {
+.wrapper {
     max-width: 1039px;
     min-width: 640px;
     margin: 0 auto;
@@ -12,4 +12,8 @@
 }
 .space {
     margin-right:var(--telekom-spacing-unit-x8);
+}
+scale-button {
+    width: 100% !important;
+    display: block;
 }

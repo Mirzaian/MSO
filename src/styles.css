@@ -9,8 +9,11 @@ body {
   margin: 0;
   padding: 0;
 }
-.content {
+.wrapper {
   width: 100%;
+}
+.my-translated-paragraph{
+  white-space: pre-wrap;
 }
 .center {
   margin: 0 auto;
