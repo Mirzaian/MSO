@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   login(){
     console.log(this.email),
     console.log(this.password)
-    if(this.email == "miniplan" && this.password == "123456")
+    if(this.email == "k.mirzaian@telekom.de" && this.password == "123456")
     {
       this.router.navigate(['/index'])
       this.userService.isUserLoggedIn$.next(true)

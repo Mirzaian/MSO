@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { UserService } from '../services/user.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ import { UserService } from '../services/user.service';
 export class HeaderComponent implements OnInit {
 
   showOutMenu: boolean = false;
+  isShown: boolean = false;
 
   mainNavigation = [
     {
@@ -45,12 +46,7 @@ export class HeaderComponent implements OnInit {
           ],
         },
       ],
-    },
-    { name: "Reports", id: "Topic Three", href: "#topic-three" },
-    { name: "Sharing", id: "Topic Four", href: "#topic-four" },
-    { name: "Integrations", id: "Topic Five", href: "#topic-five" },
-    { name: "Updates", id: "Topic Five", href: "#topic-five" },
-  ];
+    }];
 
   languageNavigation = [
     { name: "Deutsch", id: "de-DE", onClick: () => {this.ngZone.run(()=> {this.selectLanguage("de-DE")})}},
@@ -58,7 +54,7 @@ export class HeaderComponent implements OnInit {
   ];
 
   iconNavigation = [
-    { name: "Search", id: "search", icon: "action-search" },
+    { name: "Search", id: "search", onClick: () => {this.ngZone.run(()=> {this.isShown = ! this.isShown})}, icon: "action-search" },
   ];
   
 
@@ -77,10 +73,10 @@ export class HeaderComponent implements OnInit {
   isUserLoggedIn: boolean = false;
 
   constructor(private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService:UserService) {
+    this.translateService.getTranslation(this.currentLanguage).subscribe(()=>{this.loadTranslations()})
     translateService.onLangChange.subscribe((languageSettings)=>{
       this.currentLanguage = languageSettings.lang;
-      this.languageNavigation[0].name=this.translateService.instant("header.language.german");
-      this.languageNavigation[1].name=this.translateService.instant("header.language.english");
+      this.loadTranslations();
     })
     userService.isUserLoggedIn$.subscribe((loginStatus)=>this.isUserLoggedIn = loginStatus)
   }
@@ -97,6 +93,31 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.userService.logout()  
+  }
+
+  loadTranslations() {
+    this.languageNavigation[0].name=this.translateService.instant("header.language.german");
+    this.languageNavigation[1].name=this.translateService.instant("header.language.english");
+
+    this.mainNavigation[0].name=this.translateService.instant("mainNavigation.home");
+    this.mainNavigation[1].name=this.translateService.instant("mainNavigation.monitoring");
+
+    this.mainNavigation[1].children[0].name=this.translateService.instant("mainNavigation.dashboard");
+    this.mainNavigation[1].children[0].children[0].name=this.translateService.instant("mainNavigation.overview");
+
+    this.mainNavigation[1].children[1].name=this.translateService.instant("mainNavigation.basic-checks");
+    this.mainNavigation[1].children[1].children[0].name=this.translateService.instant("mainNavigation.uptime");
+
+    this.mainNavigation[1].children[2].name=this.translateService.instant("mainNavigation.advanced-checks");
+    this.mainNavigation[1].children[2].children[0].name=this.translateService.instant("mainNavigation.page-speed");
+    this.mainNavigation[1].children[2].children[1].name=this.translateService.instant("mainNavigation.transaction");
+
+    this.iconNavigation[0].name=this.translateService.instant("iconNavigation.search");
+
+    this.userNavigation[2].name=this.translateService.instant("userNavigation.user-care");
+    this.userNavigation[3].name=this.translateService.instant("userNavigation.login-settings");
+    this.userNavigation[5].name=this.translateService.instant("userNavigation.user-support");
+    this.userNavigation[7].name=this.translateService.instant("userNavigation.logout");
   }
 
   /*
