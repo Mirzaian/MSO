@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscriber } from 'rxjs';
 import { vmGroups } from 'src/app/models/vm-groups';
 import { DataService } from 'src/app/services/data.service';
-import { obser}
 
 @Component({
   selector: 'app-overview',
@@ -13,9 +11,7 @@ export class OverviewComponent implements OnInit {
 
   constructor(private dataService: DataService) {
     
-    const test = new Observable(Subscriber => {
-      console.log(dataService.getAll())
-    });
+    console.log(dataService.getAll())
    }
 
   ngOnInit(): void {
