@@ -38,6 +38,9 @@ scale-notification-toast::part(base --opened) {
 .mw-200 {
   max-width: 200px
 }
+.mb-100 {
+  margin-bottom: 100px;
+}
 .mb-30 {
   margin-bottom: 30px;
 }

@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
           name: "Dashboard",
           id: "oberview-1",
           children: [
-            { name: "Overview", id: "Third Level 4", href: "#third-level" },
+            { name: "Overview", id: "Third Level 4", href: "dashboard/overview" },
           ],
         },
         {

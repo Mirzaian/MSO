@@ -40,5 +40,8 @@
     "h2_search-line": "Wonach suchen Sie?",
     "search-input": "Wonach suchen Sie?",
     "search-title": "Suche"
+  },
+  "overview": {
+    "headline": "Dashboard"
   }
 }

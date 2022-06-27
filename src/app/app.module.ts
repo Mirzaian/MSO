@@ -10,12 +10,12 @@ import { FooterComponent } from '../app/overlay/footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
-import { NotificationBannerComponent } from './notification-banner/notification-banner.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HeaderComponent } from '../app/overlay/header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { OverviewComponent } from './dashboard/overview/overview.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json' );
@@ -31,9 +31,9 @@ const routing: Routes = [
     FooterComponent,
     LoginComponent,
     IndexComponent,
-    NotificationBannerComponent,
     HeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    OverviewComponent
   ],
   imports: [
     RouterModule.forRoot(routing),
