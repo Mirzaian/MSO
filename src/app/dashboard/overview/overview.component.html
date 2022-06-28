@@ -1,83 +1,85 @@
 <div class="wrapper">
-    <div class="mt-40">
-        <h1 class="tv-Center mb-30 db">
-            {{  'overview.headline' | translate  }}
-        </h1>
-        <div class="container center">
-            <scale-sidebar-nav collapsible-label="Explore this topic">
-                <scale-sidebar-nav-item>
-                <a>Connections</a>
-                </scale-sidebar-nav-item>
-                <scale-sidebar-nav-collapsible label="Administration" expanded>
-                    <scale-sidebar-nav-item current>
-                    <a href="#">Desktops Systemteam 1</a>
-                    </scale-sidebar-nav-item>
-                </scale-sidebar-nav-collapsible>
-                <scale-sidebar-nav-collapsible label="Ausbildung">
-                    <scale-sidebar-nav-item>
-                    <a href="#">D3 Ausbildung</a>
-                    </scale-sidebar-nav-item>
-                </scale-sidebar-nav-collapsible>
-                <scale-sidebar-nav-collapsible label="Backup">
-                </scale-sidebar-nav-collapsible>
-                <scale-sidebar-nav-collapsible label="Central Server">
-                    <scale-sidebar-nav-item>
-                    <a href="#">D3 Central Servers</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">D4 Central Servers</a>
-                    </scale-sidebar-nav-item>
-                </scale-sidebar-nav-collapsible>
-                <scale-sidebar-nav-collapsible label="Citrix">
-                    <scale-sidebar-nav-item>
-                    <a href="#">Citrix Central Access</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">CtxF Management D3</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">CtxF Management D4</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">CtxF-megaplan-dmst</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">Citrix D4 Labor</a>
-                    </scale-sidebar-nav-item>
-                </scale-sidebar-nav-collapsible>
-                <scale-sidebar-nav-collapsible label="DC Domain GALACTICA">
-                </scale-sidebar-nav-collapsible>
-                <scale-sidebar-nav-collapsible label="IBM-KM-Tool">
-                </scale-sidebar-nav-collapsible>
-                <scale-sidebar-nav-collapsible label="IQS PUB">
-                    <scale-sidebar-nav-item>
-                    <a href="#">IQS1 D3 Synnet - deleted</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">IQS1a D3 Synnet</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">IQS2 D3 Synnet</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">IQS1 D4 Real</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">IQS2 D4 Real</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">IQS3 MP4</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-item>
-                    <a href="#">GIS DB Server MP4 MP5</a>
-                    </scale-sidebar-nav-item>
-                    <scale-sidebar-nav-collapsible label="Labor">
-                    <scale-sidebar-nav-item>
-                    <a href="#">Labor-Orchester</a>
-                    </scale-sidebar-nav-item>
-                    </scale-sidebar-nav-collapsible>
-                </scale-sidebar-nav-collapsible>
-            </scale-sidebar-nav>
-        </div>
+  <div class="mt-40">
+    <h1 class="tv-Center mb-30 db">
+      {{ "overview.headline" | translate }}
+    </h1>
+    <div class="container center">
+      <scale-sidebar-nav collapsible-label="Server Kategorien">
+        <scale-sidebar-nav-item *ngFor="let connection of connections">
+          <a>{{ connection }}</a>
+        </scale-sidebar-nav-item>
+        <!--
+        <scale-sidebar-nav-collapsible label="Administration" expanded>
+          <scale-sidebar-nav-item current>
+            <a href="#">Desktops Systemteam 1</a>
+          </scale-sidebar-nav-item>
+        </scale-sidebar-nav-collapsible>
+        <scale-sidebar-nav-collapsible label="Ausbildung">
+          <scale-sidebar-nav-item>
+            <a href="#">D3 Ausbildung</a>
+          </scale-sidebar-nav-item>
+        </scale-sidebar-nav-collapsible>
+        <scale-sidebar-nav-collapsible label="Backup">
+        </scale-sidebar-nav-collapsible>
+        <scale-sidebar-nav-collapsible label="Central Server">
+          <scale-sidebar-nav-item>
+            <a href="#">D3 Central Servers</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">D4 Central Servers</a>
+          </scale-sidebar-nav-item>
+        </scale-sidebar-nav-collapsible>
+        <scale-sidebar-nav-collapsible label="Citrix">
+          <scale-sidebar-nav-item>
+            <a href="#">Citrix Central Access</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">CtxF Management D3</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">CtxF Management D4</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">CtxF-megaplan-dmst</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">Citrix D4 Labor</a>
+          </scale-sidebar-nav-item>
+        </scale-sidebar-nav-collapsible>
+        <scale-sidebar-nav-collapsible label="DC Domain GALACTICA">
+        </scale-sidebar-nav-collapsible>
+        <scale-sidebar-nav-collapsible label="IBM-KM-Tool">
+        </scale-sidebar-nav-collapsible>
+        <scale-sidebar-nav-collapsible label="IQS PUB">
+          <scale-sidebar-nav-item>
+            <a href="#">IQS1 D3 Synnet - deleted</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">IQS1a D3 Synnet</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">IQS2 D3 Synnet</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">IQS1 D4 Real</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">IQS2 D4 Real</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">IQS3 MP4</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-item>
+            <a href="#">GIS DB Server MP4 MP5</a>
+          </scale-sidebar-nav-item>
+          <scale-sidebar-nav-collapsible label="Labor">
+            <scale-sidebar-nav-item>
+              <a href="#">Labor-Orchester</a>
+            </scale-sidebar-nav-item>
+          </scale-sidebar-nav-collapsible>
+        </scale-sidebar-nav-collapsible>
+    -->
+      </scale-sidebar-nav>
     </div>
+  </div>
 </div>

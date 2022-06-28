@@ -9,9 +9,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class OverviewComponent implements OnInit {
 
+  connections: vmGroups[]
+
   constructor(private dataService: DataService) {
     
-    console.log(dataService.getAll())
+    dataService.getAll().subscribe((vmGroup) => console.log(vmGroup));
    }
 
   ngOnInit(): void {
