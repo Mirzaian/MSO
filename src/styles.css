@@ -32,6 +32,9 @@ scale-notification-toast::part(base --opened) {
 .ib {
   display: inline-block;
 }
+.df {
+  display: flex;
+}
 .fr {
   float: right;
 }
@@ -50,6 +53,9 @@ scale-notification-toast::part(base --opened) {
 .mb-5 {
   margin-bottom: 10px;
 }
+.mt-20 {
+  margin-top: 20px;
+}
 .mt-40 {
   margin-top: 40px;
 }
@@ -58,5 +64,11 @@ scale-notification-toast::part(base --opened) {
 }
 .pull-right {
   float: right;
+}
+.pull-left  {
+  float: left;
+}
+.pull-center {
+  float:none
 }
 

@@ -1,0 +1,22 @@
+<div class="box ib center" *ngFor="let card of cards">
+    <scale-card (click)="openModal()">
+        <div class="center df">
+            <img width="100px" height="auto" style="max-width: 100%;" src="{{ card.img }}" alt="placeholder" />
+        </div>
+        <h4 class="tv-Center mt-40">Servername:</h4>
+        <h5 style="padding-top:15px;" class="tv-Center">{{ card.name }}</h5>
+        <div class="mt-20 center tv-Center">
+            <h5>Status</h5>
+            <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
+            </scale-icon-alert-success>
+        </div>
+    </scale-card>
+
+    <scale-modal heading="Today is your lucky day" size="small" id="modal">
+        <p>Hello. Welcome. What a pleasure it is to have you.</p>
+        <scale-button variant="secondary" onclick="closeModal()">
+            Cancel
+        </scale-button>
+        <scale-button> Primary Action </scale-button>
+    </scale-modal>
+</div>

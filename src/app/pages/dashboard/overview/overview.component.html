@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="mt-40">
+    <h1 class="tv-Center mb-30 db">
+      {{ "overview.headline" | translate }}
+    </h1>
+    <h4 class="tv-Center mb-30 db">{{ directory?.name }}</h4>
+    <div class="df container">
+    <div class="pull-left">
+        <scale-sidebar-nav collapsible-media-query="(max-width: 44em)" collapsible-label="Server Kategorien">
+          <ng-container *ngTemplateOutlet="recursiveItem; context:{ list: connections }"></ng-container>
+          <ng-template #recursiveItem let-list="list">
+            <ng-container *ngFor="let connection of list">
+              <scale-sidebar-nav-item (click)="onClick(connection)" *ngIf="connection.children.length == 0">
+                <a>{{ connection.name }}</a>
+              </scale-sidebar-nav-item>
+              <scale-sidebar-nav-collapsible label="{{ connection.name }}" *ngIf="connection.children.length > 0">
+                <ng-container *ngIf="connection.children">
+                  <ng-container [ngTemplateOutlet]="recursiveItem"
+                    [ngTemplateOutletContext]="{list:connection.children}">
+                  </ng-container>
+                </ng-container>
+              </scale-sidebar-nav-collapsible>
+            </ng-container>
+          </ng-template>
+        </scale-sidebar-nav>
+      </div>
+      <app-list class="center"></app-list>
+    </div>
+  </div>
+</div>

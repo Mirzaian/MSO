@@ -6,16 +6,17 @@ import { ComponentLibraryModule } from '@telekom/scale-components-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from '../app/overlay/footer/footer.component';
-import { LoginComponent } from './login/login.component';
+import { FooterComponent } from '../app/components/overlay/footer/footer.component';
+import { LoginComponent } from './pages/login/login.component';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './index/index.component';
+import { IndexComponent } from './pages/index/index.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HeaderComponent } from '../app/overlay/header/header.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { OverviewComponent } from './dashboard/overview/overview.component';
+import { HeaderComponent } from '../app/components/overlay/header/header.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { OverviewComponent } from './pages/dashboard/overview/overview.component';
+import { ListComponent } from './components/list/list.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json' );
@@ -33,7 +34,8 @@ const routing: Routes = [
     IndexComponent,
     HeaderComponent,
     PageNotFoundComponent,
-    OverviewComponent
+    OverviewComponent,
+    ListComponent
   ],
   imports: [
     RouterModule.forRoot(routing),

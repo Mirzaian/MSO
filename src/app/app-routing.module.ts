@@ -1,10 +1,10 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OverviewComponent } from './dashboard/overview/overview.component';
+import { OverviewComponent } from './pages/dashboard/overview/overview.component';
 
-import { IndexComponent } from './index/index.component';
-import { LoginComponent } from './login/login.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { IndexComponent } from './pages/index/index.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [

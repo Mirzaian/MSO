@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-header',

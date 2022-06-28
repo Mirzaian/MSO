@@ -9,14 +9,19 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class OverviewComponent implements OnInit {
 
-  connections: vmGroups[]
+  connections: vmGroups[] = [];
+  directory: vmGroups;
 
-  constructor(private dataService: DataService) {
-    
-    dataService.getAll().subscribe((vmGroup) => console.log(vmGroup));
-   }
+  constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dataService.getAll().subscribe((vmGroup => { this.connections = vmGroup}));
   }
 
+    onClick(vmGroups: vmGroups) {
+      console.log(vmGroups.name)
+      this.directory = vmGroups
+    }
 }
+
+
