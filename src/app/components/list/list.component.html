@@ -1,22 +1,84 @@
+<!-- Card view -->
 <div class="box ib center" *ngFor="let card of cards">
-    <scale-card (click)="openModal()">
+    <scale-card (click)="openModal(card)">
         <div class="center df">
             <img width="100px" height="auto" style="max-width: 100%;" src="{{ card.img }}" alt="placeholder" />
         </div>
         <h4 class="tv-Center mt-40">Servername:</h4>
-        <h5 style="padding-top:15px;" class="tv-Center">{{ card.name }}</h5>
+        <p class="tv-Thin tv-Center" style="padding-top:15px;">{{ card.name }}</p>
         <div class="mt-20 center tv-Center">
             <h5>Status</h5>
             <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
             </scale-icon-alert-success>
         </div>
     </scale-card>
-
-    <scale-modal heading="Today is your lucky day" size="small" id="modal">
-        <p>Hello. Welcome. What a pleasure it is to have you.</p>
-        <scale-button variant="secondary" onclick="closeModal()">
+    <!-- Modal view -->
+    <scale-modal heading="Server Informationen" id="modal">
+        <div class="content ib">
+            <h3>System
+                <span class="pull-right">
+                    <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
+                    </scale-icon-alert-success>
+                </span>
+                <scale-divider></scale-divider>
+            </h3>
+            <h4 type="text" id="servername" class="box1">Name:</h4>
+            <p type="text" id="servername" class="box2">{{ directory?.name}}</p>
+            <h4 type="text" id="servername" class="box1">Betriebssystem:</h4>
+            <p type="text" id="servername" class="box2">Windows Server 2019</p>
+            <h4 type="text" id="servername" class="box1">Prozessor:</h4>
+            <p type="text" id="servername" class="box2">Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz</p>
+            <h4 type="text" id="servername" class="box1">Arbeitsspeicher:</h4>
+            <p type="text" id="servername" class="box2">30 GB</p>
+            <h4 type="text" id="servername" class="box1">Festplattenspeicher:</h4>
+            <p type="text" id="servername" class="box2">500 GB</p>
+            <h3>Netzwerk
+                <scale-divider></scale-divider>
+            </h3>
+            <h4 type="text" id="servername" class="box1">IPv4:</h4>
+            <p type="text" id="servername" class="box2">79.208.243.152</p>
+            <h4 type="text" id="servername" class="box1">IPv6:</h4>
+            <p type="text" id="servername" class="box2">2003:E6:170F:8D13:F109:A472:39D3:9C2A</p>
+            <h4 type="text" id="servername" class="box1">Standort:</h4>
+            <p type="text" id="servername" class="box2">Deutschland</p>
+            <h3>Anwendungen
+                <scale-divider></scale-divider>
+            </h3>
+            <scale-table size="small">
+                <table>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Spotify</td>
+                        </tr>
+                        <tr>
+                            <td>Teamspeak</td>
+                        </tr>
+                        <tr>
+                            <td>Outlook</td>
+                        </tr>
+                        <tr>
+                            <td>Word</td>
+                        </tr>
+                        <tr>
+                            <td>Powerpoint</td>
+                        </tr>
+                        <tr>
+                            <td>Visual Studio Code</td>
+                        </tr>
+                        <tr>
+                            <td>Google Chrome</td>
+                        </tr>
+                        <tr>
+                            <td>Firefox</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </scale-table>
+        </div>
+        <scale-button slot="action" variant="secondary" (click)="closeModal()">
             Cancel
         </scale-button>
-        <scale-button> Primary Action </scale-button>
     </scale-modal>
 </div>

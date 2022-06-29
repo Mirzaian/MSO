@@ -17,6 +17,8 @@ import { HeaderComponent } from '../app/components/overlay/header/header.compone
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { OverviewComponent } from './pages/dashboard/overview/overview.component';
 import { ListComponent } from './components/list/list.component';
+import { SettingsComponent } from './pages/account/settings/settings.component';
+import { InfoComponent } from './pages/account/info/info.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json' );
@@ -35,7 +37,9 @@ const routing: Routes = [
     HeaderComponent,
     PageNotFoundComponent,
     OverviewComponent,
-    ListComponent
+    ListComponent,
+    SettingsComponent,
+    InfoComponent
   ],
   imports: [
     RouterModule.forRoot(routing),

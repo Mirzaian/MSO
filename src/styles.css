@@ -22,6 +22,12 @@ body {
 .tv-Center {
   text-align: center;
 }
+.tv-Thin {
+  font-weight: --telekom-typography-font-weight-thin;
+}
+.tv-Regular {
+  font-weight: --telekom-typography-font-weight-regular;
+}
 scale-notification-toast::part(base --opened) {
   opacity: 1;
   z-index: 101;
@@ -34,6 +40,15 @@ scale-notification-toast::part(base --opened) {
 }
 .df {
   display: flex;
+}
+.fd-c {
+  flex-direction: column;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
 }
 .fr {
   float: right;
@@ -58,6 +73,9 @@ scale-notification-toast::part(base --opened) {
 }
 .mt-40 {
   margin-top: 40px;
+}
+.mt-60 {
+  margin-top: 60px;
 }
 .mt-100 {
   margin-top: 100px;

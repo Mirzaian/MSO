@@ -61,8 +61,8 @@ export class HeaderComponent implements OnInit {
   userNavigation = [
     { type: 'userInfo', shortName: 'Kevin', name: 'Kevin Mirzaian', email: 'k.mirzaian@telekom.de'},
     { type: 'divider'},
-    { type: 'item', name: 'Account Informationen', id: 'user-care', href: '/user-info', onClick: () => {}, icon: 'user-file-user', iconPosition: 'prefix' },
-    { type: 'item', name: 'Einstellungen', id: 'login-settings', href: '/settings', onClick: () => {}, icon: 'service-settings', iconPosition: 'prefix' },
+    { type: 'item', name: 'Account Informationen', id: 'user-info', href: '/account/information', onClick: () => {}, icon: 'user-file-user', iconPosition: 'prefix' },
+    { type: 'item', name: 'Einstellungen', id: 'user-settings', href: '/account/settings', onClick: () => {}, icon: 'service-settings', iconPosition: 'prefix' },
     { type: 'divider'},
     { type: 'item', name: 'Kundenservice', id: 'user-support', href: '/support', onClick: () => {}, icon: 'service-support', iconPosition: 'prefix'  },
     { type: 'divider' },

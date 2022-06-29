@@ -2,3 +2,25 @@
     max-width: 300px;
     margin: 0 1em;
 }
+.content {
+    width: 100%;
+}
+.h3 {
+    margin-right: 50px;
+}
+.box1 {
+    display: inline-block;
+    text-align: left;
+    width: 220px;
+    line-height:0px;
+}
+.box2 {
+    text-align: left;
+    width: 350px;
+    line-height: 0px;
+    display: inline-block;
+}
+.footer {
+    bottom: 0;
+    text-align: center;
+}

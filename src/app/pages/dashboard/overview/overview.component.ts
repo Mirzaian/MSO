@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { vmGroups } from 'src/app/models/vm-groups';
+import { Component, OnInit, Output } from '@angular/core';
+import { vmGroups, vmServer } from 'src/app/models/vm-groups';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class OverviewComponent implements OnInit {
 
   connections: vmGroups[] = [];
+  category: vmServer[] = [];
   directory: vmGroups;
 
   constructor(private dataService: DataService) {}
@@ -21,6 +22,7 @@ export class OverviewComponent implements OnInit {
     onClick(vmGroups: vmGroups) {
       console.log(vmGroups.name)
       this.directory = vmGroups
+      this.dataService.filter
     }
 }
 

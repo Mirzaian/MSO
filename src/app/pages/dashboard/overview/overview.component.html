@@ -1,12 +1,11 @@
 <div class="wrapper">
-  <div class="mt-40">
-    <h1 class="tv-Center mb-30 db">
+    <h1 class="tv-Center mb-30">
       {{ "overview.headline" | translate }}
     </h1>
-    <h4 class="tv-Center mb-30 db">{{ directory?.name }}</h4>
-    <div class="df container">
-    <div class="pull-left">
-        <scale-sidebar-nav collapsible-media-query="(max-width: 44em)" collapsible-label="Server Kategorien">
+    <h4 class="tv-Center mb-30">{{ directory?.name }}</h4>
+    <div class="container df">
+      <div class="navbar">
+        <scale-sidebar-nav collapsible-label="Server Kategorien">
           <ng-container *ngTemplateOutlet="recursiveItem; context:{ list: connections }"></ng-container>
           <ng-template #recursiveItem let-list="list">
             <ng-container *ngFor="let connection of list">
@@ -24,7 +23,8 @@
           </ng-template>
         </scale-sidebar-nav>
       </div>
-      <app-list class="center"></app-list>
+    <div class="list-cont">
+      <app-list></app-list>
     </div>
   </div>
 </div>

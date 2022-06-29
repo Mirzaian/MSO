@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { vmGroups } from 'src/app/models/vm-groups';
 
 @Component({
   selector: 'app-list',
@@ -6,6 +7,8 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+  directory: vmGroups;
 
   cards: any[] = [
     {
@@ -28,10 +31,11 @@ export class ListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  openModal() {
+  openModal(vmGroups: vmGroups) {
+    console.log(this.directory = vmGroups);    
     const modal = document.getElementById('modal') as any;
     modal.opened = true;
   }
