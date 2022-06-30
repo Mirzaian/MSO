@@ -13,7 +13,7 @@
         </div>
     </scale-card>
     <!-- Modal view -->
-    <scale-modal heading="Server Informationen" id="modal">
+    <scale-modal heading="{{ 'server.headline' | translate }}" id="modal">
         <div class="content ib">
             <h3>System
                 <span class="pull-right">
@@ -24,13 +24,13 @@
             </h3>
             <h4 type="text" id="servername" class="box1">Name:</h4>
             <p type="text" id="servername" class="box2">{{ directory?.name}}</p>
-            <h4 type="text" id="servername" class="box1">Betriebssystem:</h4>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.operating-system" | translate }}</h4>
             <p type="text" id="servername" class="box2">Windows Server 2019</p>
-            <h4 type="text" id="servername" class="box1">Prozessor:</h4>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.processor" | translate }}</h4>
             <p type="text" id="servername" class="box2">Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz</p>
-            <h4 type="text" id="servername" class="box1">Arbeitsspeicher:</h4>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.memory" | translate }}</h4>
             <p type="text" id="servername" class="box2">30 GB</p>
-            <h4 type="text" id="servername" class="box1">Festplattenspeicher:</h4>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.hard-disk-storage" | translate }}</h4>
             <p type="text" id="servername" class="box2">500 GB</p>
             <h3>Netzwerk
                 <scale-divider></scale-divider>
@@ -39,9 +39,9 @@
             <p type="text" id="servername" class="box2">79.208.243.152</p>
             <h4 type="text" id="servername" class="box1">IPv6:</h4>
             <p type="text" id="servername" class="box2">2003:E6:170F:8D13:F109:A472:39D3:9C2A</p>
-            <h4 type="text" id="servername" class="box1">Standort:</h4>
+            <h4 type="text" id="servername" class="box1">{{ "server.network.location" | translate }}</h4>
             <p type="text" id="servername" class="box2">Deutschland</p>
-            <h3>Anwendungen
+            <h3>{{ "server.applications" | translate }}
                 <scale-divider></scale-divider>
             </h3>
             <scale-table size="small">
@@ -78,7 +78,7 @@
             </scale-table>
         </div>
         <scale-button slot="action" variant="secondary" (click)="closeModal()">
-            Cancel
+            {{ "server.cancel" | translate }}
         </scale-button>
     </scale-modal>
 </div>

@@ -4,9 +4,8 @@
     "language.german": "Deutsch"
   },
   "mainNavigation": {
-    "home": "Home",
-    "monitoring": "Monitoring",
     "dashboard": "Dashboard",
+    "server": "Server",
     "overview": "Overview",
     "basic-checks": "Basic checks",
     "uptime": "Uptime",
@@ -40,5 +39,39 @@
     "h2_search-line": "What are you looking for?",
     "search-input": "What are you looking for?",
     "search-title": "Search"
+  },
+  "dashboard": {
+    "headline": "Dashboard"
+  },
+  "overview": {
+    "headline": "Dashboard"
+  },
+  "server": {
+    "headline": "Server information",
+    "system" : {
+      "operating-system": "Operating System:",
+      "processor": "Processor:",
+      "memory": "RAM:",
+      "hard-disk-storage": "Hard Disk Storage:"
+    },
+    "network": {
+      "location": "Location:"
+    },
+    "applications": "Applications",
+    "cancel": "Cancel"
+  },
+  "info": {
+    "headline": "Account information",
+    "sub-title": "Your personal data",
+    "email-address": "E-Mail Address:"
+  },
+  "settings": {
+    "headline": "Settings",
+    "headline-2": "Change password",
+    "sub-title": "To successfully change your password, you must confirm the entry with your old password",
+    "input-old": "Please enter your old password",
+    "input-new": "Please enter your new password",
+    "input-confirm": "Please confirm your new password",
+    "save": "Save"
   }
 }

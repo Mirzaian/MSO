@@ -11,6 +11,9 @@ body {
 .wrapper {
   width: 100%;
 }
+.container {
+  width: 100%;
+}
 .my-translated-paragraph{
   white-space: pre-wrap;
 }

@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     console.log(this.password)
     if(this.email == "k.mirzaian@telekom.de" && this.password == "123456")
     {
-      this.router.navigate(['/index'])
+      this.router.navigate(['/dashboard'])
       this.userService.isUserLoggedIn$.next(true)
       localStorage.setItem('loginStatus', 'true')
     }

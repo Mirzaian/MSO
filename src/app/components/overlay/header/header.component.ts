@@ -14,38 +14,17 @@ export class HeaderComponent implements OnInit {
 
   mainNavigation = [
     {
-      name: "Startseite",
-      id: "index",
+      name: "Dashboard",
+      id: "dashboard",
+      href: "dashboard",
       children: [],
     },
       
     {
-      name: "Monitoring",
-      id: "overview",
-      children: [
-        {
-          name: "Dashboard",
-          id: "oberview-1",
-          children: [
-            { name: "Overview", id: "Third Level 4", href: "dashboard/overview" },
-          ],
-        },
-        {
-          name: "Basic checks",
-          id: "Second Level 2",
-          children: [
-            { name: "Uptime", id: "Third Level 3", href: "#third-level" },
-          ],
-        },
-        {
-          name: "Advanced checks",
-          id: "Second Level 2",
-          children: [
-            { name: "Page Speed", id: "Third Level 3", href: "#third-level" },
-            { name: "Transaction", id: "Third Level 3", href: "#third-level" },
-          ],
-        },
-      ],
+      name: "Server",
+      id: "server",
+      href: "dashboard/server/overview",
+      children: [],
     }];
 
   languageNavigation = [
@@ -99,18 +78,8 @@ export class HeaderComponent implements OnInit {
     this.languageNavigation[0].name=this.translateService.instant("header.language.german");
     this.languageNavigation[1].name=this.translateService.instant("header.language.english");
 
-    this.mainNavigation[0].name=this.translateService.instant("mainNavigation.home");
-    this.mainNavigation[1].name=this.translateService.instant("mainNavigation.monitoring");
-
-    this.mainNavigation[1].children[0].name=this.translateService.instant("mainNavigation.dashboard");
-    this.mainNavigation[1].children[0].children[0].name=this.translateService.instant("mainNavigation.overview");
-
-    this.mainNavigation[1].children[1].name=this.translateService.instant("mainNavigation.basic-checks");
-    this.mainNavigation[1].children[1].children[0].name=this.translateService.instant("mainNavigation.uptime");
-
-    this.mainNavigation[1].children[2].name=this.translateService.instant("mainNavigation.advanced-checks");
-    this.mainNavigation[1].children[2].children[0].name=this.translateService.instant("mainNavigation.page-speed");
-    this.mainNavigation[1].children[2].children[1].name=this.translateService.instant("mainNavigation.transaction");
+    this.mainNavigation[0].name=this.translateService.instant("mainNavigation.dashboard");
+    this.mainNavigation[1].name=this.translateService.instant("mainNavigation.server");
 
     this.iconNavigation[0].name=this.translateService.instant("iconNavigation.search");
 

@@ -4,15 +4,8 @@
     "language.german": "Deutsch"
   },
   "mainNavigation": {
-    "home": "Startseite",
-    "monitoring": "Überwachung",
-    "dashboard": "Dashboard",
-    "overview": "Übersicht",
-    "basic-checks": "Grundlegende Kontrollen",
-    "uptime": "Betriebszeit",
-    "advanced-checks": "Fortgeschrittene Kontrollen",
-    "page-speed": "Seitengeschwindigkeit",
-    "transaction": "Transation"
+    "dashboard": "Übersicht",
+    "server": "Server"
   },
   "iconNavigation": {
     "search": "Suche"
@@ -41,7 +34,38 @@
     "search-input": "Wonach suchen Sie?",
     "search-title": "Suche"
   },
+  "dashboard": {
+    "headline": "Übersicht"
+  },
   "overview": {
-    "headline": "Dashboard"
+    "headline": "Server"
+  },
+  "server": {
+    "headline": "Server Informationen",
+    "system" : {
+      "operating-system": "Betriebssystem:",
+      "processor": "Prozessor:",
+      "memory": "Arbeitsspeicher:",
+      "hard-disk-storage": "Festplattenspeicher:"
+    },
+    "network": {
+      "location": "Standort:"
+    },
+    "applications": "Anwendungen",
+    "cancel": "Schließen"
+  },
+  "info": {
+    "headline": "Benutzerinformationen",
+    "sub-title": "Deine persönlichen Daten",
+    "email-address": "E-Mail Adresse:"
+  },
+  "settings": {
+    "headline": "Einstellungen",
+    "headline-2": "Passwort ändern",
+    "sub-title": "Um Ihr Passwort erfolgreich zu ändern, müssen Sie die Eingabe mit ihrem alten Passwort bestätigen",
+    "input-old": "Bitte geben Sie ihr altes Passwort ein",
+    "input-new": "Bitte geben Sie ihr neues Passwort ein",
+    "input-confirm": "Bitte bestätigen Sie ihr neues Passwort",
+    "save": "Speichern"
   }
 }
