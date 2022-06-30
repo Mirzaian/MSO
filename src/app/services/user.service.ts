@@ -13,9 +13,14 @@ export class UserService {
     this.isUserLoggedIn$.next(localStorage.getItem('loginStatus') == 'true')
    }
 
+   isLoggedIn():boolean {
+    const status = (localStorage.getItem('loginStatus') == 'true')
+    return status;
+   }
+
    logout() {
     this.isUserLoggedIn$.next(false)
     localStorage.removeItem('loginStatus')
-    this.router.navigate(['/'])
+    this.router.navigate(['login'])
    }
 }

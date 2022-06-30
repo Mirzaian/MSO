@@ -7,14 +7,15 @@ import { OverviewComponent } from './pages/server/overview.component';
 
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { AuthGuard } from './guard/auth.guard';
 
 
 const routes: Routes = [
   { path: '',   component: LoginComponent, pathMatch: 'full' }, // redirect to `login`
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'account/information', component: InfoComponent },
-  { path: 'account/settings', component: SettingsComponent },
-  { path: 'dashboard/server/overview', component: OverviewComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'account/information', component: InfoComponent, canActivate: [AuthGuard] },
+  { path: 'account/settings', component: SettingsComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard/server/overview', component: OverviewComponent, canActivate: [AuthGuard] },
   { path: '**', component: PageNotFoundComponent }  // Wildcard route for a 404 page
 ];
 
