@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'account/information', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'account/settings', component: SettingsComponent, canActivate: [AuthGuard] },
   { path: 'dashboard/server/overview', component: OverviewComponent, canActivate: [AuthGuard] },
-  { path: '**', component: PageNotFoundComponent }  // Wildcard route for a 404 page
+  { path: '**', component: PageNotFoundComponent }  // Route for 404 page
 ];
 
 @NgModule({
