@@ -8,10 +8,11 @@ import { OverviewComponent } from './pages/server/overview.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AuthGuard } from './guard/auth.guard';
+import { SignedGuard } from './guard/signed.guard';
 
 
 const routes: Routes = [
-  { path: '',   component: LoginComponent, pathMatch: 'full' }, // redirect to `login`
+  { path: 'login',   component: LoginComponent, canActivate: [SignedGuard] ,pathMatch: 'full' }, // redirect to `login`
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'account/information', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'account/settings', component: SettingsComponent, canActivate: [AuthGuard] },

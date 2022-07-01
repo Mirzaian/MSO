@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit {
     { type: 'divider'},
     { type: 'item', name: 'Kundenservice', id: 'user-support', href: '/support', onClick: () => {}, icon: 'service-support', iconPosition: 'prefix'  },
     { type: 'divider' },
-    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout()}, href: '#', variant: 'secondary'},
+    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout()}, href: 'login', variant: 'secondary'},
   ];
 
   currentLanguage: string = 'de-DE';
