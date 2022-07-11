@@ -187,58 +187,69 @@ export class DataService {
   private vmServer: vmServer[] = [
     {
       id: 1,
-      name: "he104488 D4 CTXH Amin DT1",
-      category: 1
+      name: "CATEGORY 1",
+      category: 1,
+      os: "windows"
     },
     {
       id: 2,
-      name: "he104488 D4 CTXH Amin DT2",
-      category: 1
+      name: "CATEGORY 1",
+      category: 1,
+      os: "ubuntu"
     },
     {
       id: 3,
-      name: "he104488 D4 CTXH Amin DT3",
-      category: 1
+      name: "CATEGORY 1",
+      category: 1,
+      os: "windows"
     },
     {
       id: 4,
-      name: "he104488 D4 CTXH Amin DT4",
-      category: 1
+      name: "CATEGORY 1",
+      category: 1,
+      os: "macos"
     },
     {
       id: 5,
-      name: "he423019 Ausbildung DT1",
-      category: 2
+      name: "CATEGORY 2",
+      category: 2,
+      os: "debian"
     },
     {
       id: 6,
-      name: "he423019 Ausbildung DT2",
-      category: 2
+      name: "CATEGORY 2",
+      category: 2,
+      os: "windows"
     },
     {
       id: 7,
-      name: "he423019 Ausbildung DT3",
-      category: 2
+      name: "CATEGORY 2",
+      category: 2,
+      os: "windows"
     },
     {
       id: 8,
-      name: "he344201 Backup 1",
-      category: 3
+      name: "CATEGORY 3",
+      category: 3,
+      os: "windows"
     },
     {
       id: 9,
-      name: "he344201 Backup 2",
-      category: 3
+      name: "CATEGORY 3",
+      category: 3,
+      os: "macos"
     },
     {
       id: 10,
       name: "he42123 D3 Server 1",
-      category: 4
+      category: 4,
+      os: "debian"
     },
     {
       id: 11,
       name: "he42123 D3 Server 2",
-      category: 4
+      category: 4,
+      os: "debian"
     },
   ]
   
@@ -249,9 +260,9 @@ export class DataService {
     return of(this.vmGroup);
   }
 
-  public filter(vmServer: vmServer) : void {
-    const result = this.vmServer.filter( vmServer => vmServer.category == 1)
-    console.log(result);
+  public filter(category: number): Observable<vmServer[]> {
+    const result = this.vmServer.filter( vmServer => vmServer.category == category)
+    return of(result);
   }
 }
 

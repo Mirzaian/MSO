@@ -2,7 +2,12 @@
 <div class="box ib center" *ngFor="let card of cards">
     <scale-card (click)="openModal(card)">
         <div class="center df">
-            <img width="100px" height="auto" style="max-width: 100%;" src="{{ card.img }}" alt="placeholder" />
+            <ng-container [ngSwitch]="card.os">
+            <img width="100px" height="auto" style="max-width: 100%;" alt="Windows" *ngSwitchCase="'windows'" src="assets/images/os/windows.png">
+            <img width="100px" height="auto" style="max-width: 100%;" alt="Ubuntu" *ngSwitchCase="'ubuntu'" src="assets/images/os/ubuntu.png">
+            <img width="100px" height="auto" style="max-width: 100%;" alt="macOS" *ngSwitchCase="'macos'" src="assets/images/os/macos.png">
+            <img width="100px" height="auto" style="max-width: 100%;" alt="Debian" *ngSwitchCase="'debian'" src="assets/images/os/debian.png">
+        </ng-container>
         </div>
         <h4 class="tv-Center mt-40">Servername:</h4>
         <p class="tv-Thin tv-Center" style="padding-top:15px;">{{ card.name }}</p>
@@ -23,7 +28,7 @@
                 <scale-divider></scale-divider>
             </h3>
             <h4 type="text" id="servername" class="box1">Name:</h4>
-            <p type="text" id="servername" class="box2">{{ directory?.name}}</p>
+            <p type="text" id="servername" class="box2">{{ selectedServer?.name}}</p>
             <h4 type="text" id="servername" class="box1">{{ "server.system.operating-system" | translate }}</h4>
             <p type="text" id="servername" class="box2">Windows Server 2019</p>
             <h4 type="text" id="servername" class="box1">{{ "server.system.processor" | translate }}</h4>

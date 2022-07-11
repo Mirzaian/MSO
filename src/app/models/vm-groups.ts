@@ -8,6 +8,7 @@ export interface vmServer {
     id: number;
     name: string;
     category: number;
+    os: string;
 }
 export interface vmEntry {
     id: number;

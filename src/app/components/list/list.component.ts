@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { vmGroups } from 'src/app/models/vm-groups';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { vmGroups, vmServer } from 'src/app/models/vm-groups';
 
 @Component({
   selector: 'app-list',
@@ -8,34 +8,17 @@ import { vmGroups } from 'src/app/models/vm-groups';
 })
 export class ListComponent implements OnInit {
 
-  directory: vmGroups;
+  selectedServer: vmServer;
 
-  cards: any[] = [
-    {
-      "name": "he104488 D4 CTXH Amin DT1",
-      "img": 'assets/images/os/windows.png'
-    },
-    {
-      "name": "he104488 D4 CTXH Amin DT2",
-      "img": 'assets/images/os/ubuntu.png'
-    },
-    {
-      "name": "he104488 D4 CTXH Amin DT3",
-      "img": 'assets/images/os/debian.png'
-    },
-    {
-      "name": "he104488 D4 CTXH Amin DT4",
-      "img": 'assets/images/os/macos.png'
-    }
-  ];
+  @Input() cards: vmServer[] = [];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
   }
 
-  openModal(vmGroups: vmGroups) {
-    console.log(this.directory = vmGroups);    
+  openModal(vmServer: vmServer) {
+    this.selectedServer = vmServer;
     const modal = document.getElementById('modal') as any;
     modal.opened = true;
   }

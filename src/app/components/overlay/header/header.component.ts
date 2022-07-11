@@ -17,48 +17,48 @@ export class HeaderComponent implements OnInit {
     {
       name: "Dashboard",
       id: "dashboard",
-      onClick: () => {this.ngZone.run(()=> {this.router.navigate(['dashboard'])})},
+      onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard']) }) },
       children: [],
     },
-      
+
     {
       name: "Server",
       id: "server",
-      onClick: () => {this.ngZone.run(()=> {this.router.navigate(['dashboard/server/overview'])})},
+      onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard/server/overview']) }) },
       children: [],
     }];
 
   languageNavigation = [
-    { name: "Deutsch", id: "de-DE", onClick: () => {this.ngZone.run(()=> {this.selectLanguage("de-DE")})}},
-    { name: "Englisch", id: "en-US", onClick: () => {this.ngZone.run(()=> {this.selectLanguage("en-US")})}}
+    { name: "Deutsch", id: "de-DE", onClick: () => { this.ngZone.run(() => { this.selectLanguage("de-DE") }) } },
+    { name: "Englisch", id: "en-US", onClick: () => { this.ngZone.run(() => { this.selectLanguage("en-US") }) } }
   ];
 
   iconNavigation = [
-    { name: "Search", id: "search", onClick: () => {this.ngZone.run(()=> {this.isShown = ! this.isShown})}, icon: "action-search" },
+    { name: "Search", id: "search", onClick: () => { this.ngZone.run(() => { this.isShown = !this.isShown }) }, icon: "action-search" },
   ];
-  
+
 
   userNavigation = [
-    { type: 'userInfo', shortName: 'Kevin', name: 'Kevin Mirzaian', email: 'k.mirzaian@telekom.de'},
-    { type: 'divider'},
-    { type: 'item', name: 'Account Informationen', id: 'user-info', onClick: () => {this.ngZone.run(()=> {this.router.navigate(['/account/information'])})}, icon: 'user-file-user', iconPosition: 'prefix' },
-    { type: 'item', name: 'Einstellungen', id: 'user-settings', onClick: () => {this.ngZone.run(()=> {this.router.navigate(['/account/settings'])})}, icon: 'service-settings', iconPosition: 'prefix' },
-    { type: 'divider'},
-    { type: 'item', name: 'Kundenservice', id: 'user-support', onClick: () => {this.ngZone.run(()=> {this.router.navigate(['/support'])})}, icon: 'service-support', iconPosition: 'prefix'  },
+    { type: 'userInfo', shortName: 'Kevin', name: 'Kevin Mirzaian', email: 'k.mirzaian@telekom.de' },
     { type: 'divider' },
-    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['login']);}, variant: 'secondary'},
+    { type: 'item', name: 'Account Informationen', id: 'user-info', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/account/information']) }) }, icon: 'user-file-user', iconPosition: 'prefix' },
+    { type: 'item', name: 'Einstellungen', id: 'user-settings', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/account/settings']) }) }, icon: 'service-settings', iconPosition: 'prefix' },
+    { type: 'divider' },
+    { type: 'item', name: 'Kundenservice', id: 'user-support', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/support']) }) }, icon: 'service-support', iconPosition: 'prefix' },
+    { type: 'divider' },
+    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['login']); }, variant: 'secondary' },
   ];
 
   currentLanguage: string = 'de-DE';
   isUserLoggedIn: boolean = false;
 
-  constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService:UserService) {
-    this.translateService.getTranslation(this.currentLanguage).subscribe(()=>{this.loadTranslations()})
-    translateService.onLangChange.subscribe((languageSettings)=>{
+  constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService: UserService) {
+    this.translateService.getTranslation(this.currentLanguage).subscribe(() => { this.loadTranslations() })
+    translateService.onLangChange.subscribe((languageSettings) => {
       this.currentLanguage = languageSettings.lang;
       this.loadTranslations();
     })
-    userService.isUserLoggedIn$.subscribe((loginStatus)=>this.isUserLoggedIn = loginStatus)
+    userService.isUserLoggedIn$.subscribe((loginStatus) => this.isUserLoggedIn = loginStatus)
   }
 
   public selectLanguage(event: string) {
@@ -72,22 +72,22 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.userService.logout()  
+    this.userService.logout()
   }
 
   loadTranslations() {
-    this.languageNavigation[0].name=this.translateService.instant("header.language.german");
-    this.languageNavigation[1].name=this.translateService.instant("header.language.english");
+    this.languageNavigation[0].name = this.translateService.instant("header.language.german");
+    this.languageNavigation[1].name = this.translateService.instant("header.language.english");
 
-    this.mainNavigation[0].name=this.translateService.instant("mainNavigation.dashboard");
-    this.mainNavigation[1].name=this.translateService.instant("mainNavigation.server");
+    this.mainNavigation[0].name = this.translateService.instant("mainNavigation.dashboard");
+    this.mainNavigation[1].name = this.translateService.instant("mainNavigation.server");
 
-    this.iconNavigation[0].name=this.translateService.instant("iconNavigation.search");
+    this.iconNavigation[0].name = this.translateService.instant("iconNavigation.search");
 
-    this.userNavigation[2].name=this.translateService.instant("userNavigation.user-care");
-    this.userNavigation[3].name=this.translateService.instant("userNavigation.login-settings");
-    this.userNavigation[5].name=this.translateService.instant("userNavigation.user-support");
-    this.userNavigation[7].name=this.translateService.instant("userNavigation.logout");
+    this.userNavigation[2].name = this.translateService.instant("userNavigation.user-care");
+    this.userNavigation[3].name = this.translateService.instant("userNavigation.login-settings");
+    this.userNavigation[5].name = this.translateService.instant("userNavigation.user-support");
+    this.userNavigation[7].name = this.translateService.instant("userNavigation.logout");
   }
 
   /*

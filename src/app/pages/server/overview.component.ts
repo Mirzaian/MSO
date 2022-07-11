@@ -10,7 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class OverviewComponent implements OnInit {
 
   connections: vmGroups[] = [];
-  category: vmServer[] = [];
+  serverlist: vmServer[] = [];
   directory: vmGroups;
 
   constructor(private dataService: DataService) {}
@@ -22,7 +22,7 @@ export class OverviewComponent implements OnInit {
     onClick(vmGroups: vmGroups) {
       console.log(vmGroups.name)
       this.directory = vmGroups
-      //this.dataService = this.dataService.filter(vmGroups.children)
+      console.log(this.dataService.filter(vmGroups.category).subscribe(res => { this.serverlist =  res }))
     }
 }
 
