@@ -55,6 +55,7 @@
       "hard-disk-storage": "Hard Disk Storage:"
     },
     "network": {
+      "headline": "Network",
       "location": "Location:"
     },
     "applications": "Applications",

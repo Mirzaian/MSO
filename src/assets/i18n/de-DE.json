@@ -49,6 +49,7 @@
       "hard-disk-storage": "Festplattenspeicher:"
     },
     "network": {
+      "headline": "Netzwerk",
       "location": "Standort:"
     },
     "applications": "Anwendungen",

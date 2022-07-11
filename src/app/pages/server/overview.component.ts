@@ -22,7 +22,7 @@ export class OverviewComponent implements OnInit {
     onClick(vmGroups: vmGroups) {
       console.log(vmGroups.name)
       this.directory = vmGroups
-      this.dataService.filter
+      //this.dataService = this.dataService.filter(vmGroups.children)
     }
 }
 

@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { UserService } from '../../../services/user.service';
 
@@ -16,14 +17,14 @@ export class HeaderComponent implements OnInit {
     {
       name: "Dashboard",
       id: "dashboard",
-      href: "dashboard",
+      onClick: () => {this.ngZone.run(()=> {this.router.navigate(['dashboard'])})},
       children: [],
     },
       
     {
       name: "Server",
       id: "server",
-      href: "dashboard/server/overview",
+      onClick: () => {this.ngZone.run(()=> {this.router.navigate(['dashboard/server/overview'])})},
       children: [],
     }];
 
@@ -40,18 +41,18 @@ export class HeaderComponent implements OnInit {
   userNavigation = [
     { type: 'userInfo', shortName: 'Kevin', name: 'Kevin Mirzaian', email: 'k.mirzaian@telekom.de'},
     { type: 'divider'},
-    { type: 'item', name: 'Account Informationen', id: 'user-info', href: '/account/information', onClick: () => {}, icon: 'user-file-user', iconPosition: 'prefix' },
-    { type: 'item', name: 'Einstellungen', id: 'user-settings', href: '/account/settings', onClick: () => {}, icon: 'service-settings', iconPosition: 'prefix' },
+    { type: 'item', name: 'Account Informationen', id: 'user-info', onClick: () => {this.ngZone.run(()=> {this.router.navigate(['/account/information'])})}, icon: 'user-file-user', iconPosition: 'prefix' },
+    { type: 'item', name: 'Einstellungen', id: 'user-settings', onClick: () => {this.ngZone.run(()=> {this.router.navigate(['/account/settings'])})}, icon: 'service-settings', iconPosition: 'prefix' },
     { type: 'divider'},
-    { type: 'item', name: 'Kundenservice', id: 'user-support', href: '/support', onClick: () => {}, icon: 'service-support', iconPosition: 'prefix'  },
+    { type: 'item', name: 'Kundenservice', id: 'user-support', onClick: () => {this.ngZone.run(()=> {this.router.navigate(['/support'])})}, icon: 'service-support', iconPosition: 'prefix'  },
     { type: 'divider' },
-    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout()}, href: 'login', variant: 'secondary'},
+    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['login']);}, variant: 'secondary'},
   ];
 
   currentLanguage: string = 'de-DE';
   isUserLoggedIn: boolean = false;
 
-  constructor(private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService:UserService) {
+  constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService:UserService) {
     this.translateService.getTranslation(this.currentLanguage).subscribe(()=>{this.loadTranslations()})
     translateService.onLangChange.subscribe((languageSettings)=>{
       this.currentLanguage = languageSettings.lang;
