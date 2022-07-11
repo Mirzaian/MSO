@@ -1,0 +1,27 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.column {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.right {
+    width: 25%;
+}
+.middle {
+    width: 50%;
+}
+.left {
+    width: 25%;
+}
+.box {
+    text-align: center;
+    min-width: 20%;
+    max-width: 60%;
+    margin-right: 10px;
+}
+scale-card {
+}
