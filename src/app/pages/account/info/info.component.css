@@ -1,21 +1,27 @@
 .row {
-    display: flex;
+  display: flex;
 }
+
 .column {
-    float: left;
-    padding: 10px;
+  float: left;
+  padding: 10px;
 }
+
 .left {
-    width: 51%;
-    text-align: left;
+  width: 51%;
+  text-align: left;
 }
+
 .right {
-    width: 49%;
-    text-align: right;
+  width: 49%;
+  text-align: right;
 }
-  /* If the screen size is 600px wide or less, hide the element */
-  @media only screen and (max-width: 900px) {
-    div.left, right {
-      width: 60%;
-    }
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 900px) {
+
+  div.left,
+  right {
+    width: 60%;
   }
+}

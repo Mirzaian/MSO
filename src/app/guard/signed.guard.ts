@@ -8,7 +8,7 @@ import { UserService } from '../services/user.service';
 })
 export class SignedGuard implements CanActivate {
 
-  constructor(private service: UserService, private router: Router) {}
+  constructor(private service: UserService, private router: Router) { }
 
   canActivate() {
     if (this.service.isLoggedIn()) {
@@ -18,5 +18,5 @@ export class SignedGuard implements CanActivate {
 
     return true;
   }
-  
+
 }

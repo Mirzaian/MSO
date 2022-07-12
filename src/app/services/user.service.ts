@@ -11,16 +11,16 @@ export class UserService {
 
   constructor(private router: Router) {
     this.isUserLoggedIn$.next(localStorage.getItem('loginStatus') == 'true')
-   }
+  }
 
-   isLoggedIn():boolean {
+  isLoggedIn(): boolean {
     const status = (localStorage.getItem('loginStatus') == 'true')
     return status;
-   }
+  }
 
-   logout() {
+  logout() {
     this.isUserLoggedIn$.next(false)
     localStorage.removeItem('loginStatus')
     this.router.navigate(['login'])
-   }
+  }
 }

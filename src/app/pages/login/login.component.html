@@ -1,15 +1,19 @@
 <div class="wrapper center">
   <h1 class="login_headline">
-    {{  'login.login_headline' | translate  }}<br>
-    <span class="login_headline-ultra">{{  'login.login_headline-ultra' | translate  }}</span>
+    {{ 'login.login_headline' | translate }}<br>
+    <span class="login_headline-ultra">{{ 'login.login_headline-ultra' | translate }}</span>
   </h1>
   <p class="login-form_top-line mt-40 mb-30">
     {{ 'login.login-form_top-line' | translate }}
   </p>
   <div class="login-form">
-    <scale-notification-message class="mb-30 db tv-Center" opened> {{  'login.notification-message' | translate  }}</scale-notification-message>
-    <scale-input class="mb-30 db" label="{{ 'login.login-label-mail' | translate }}" placeholder="Max.mustermann@telekom.de" type="email" required="true" [(ngModel)]="email"></scale-input>
-    <scale-input class="mb-30 db" label="{{ 'login.login-label-password' | translate }}" type="password" required="true" [(ngModel)]="password"></scale-input>
-    <scale-button class="pull-right" id="submit" (click)="login()">{{  'login.login-submit' | translate  }}</scale-button>
+    <scale-notification-message class="mb-30 db tv-Center" opened> {{ 'login.notification-message' | translate }}
+    </scale-notification-message>
+    <scale-input class="mb-30 db" label="{{ 'login.login-label-mail' | translate }}"
+      placeholder="Max.mustermann@telekom.de" type="email" required="true" [(ngModel)]="email"></scale-input>
+    <scale-input class="mb-30 db" label="{{ 'login.login-label-password' | translate }}" type="password" required="true"
+      [(ngModel)]="password"></scale-input>
+    <scale-button class="pull-right" id="submit" (click)="login()">{{ 'login.login-submit' | translate }}</scale-button>
+    <div style="height: 100px; padding: 48px 0;">
+    </div>
   </div>
-

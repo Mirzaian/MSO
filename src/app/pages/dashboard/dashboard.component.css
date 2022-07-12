@@ -3,20 +3,25 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .column {
     margin: auto;
     display: flex;
     flex-direction: column;
 }
+
 .right {
     width: 15%;
 }
+
 .middle {
     width: 70%;
 }
+
 .left {
     width: 15%;
 }
+
 .box1 {
     background-color: red;
     width: 100%;

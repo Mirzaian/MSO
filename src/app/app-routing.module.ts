@@ -12,7 +12,7 @@ import { SignedGuard } from './guard/signed.guard';
 
 
 const routes: Routes = [
-  { path: 'login',   component: LoginComponent, canActivate: [SignedGuard] ,pathMatch: 'full' }, // redirect to `login`
+  { path: 'login', component: LoginComponent, canActivate: [SignedGuard], pathMatch: 'full' }, // redirect to `login`
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'account/information', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'account/settings', component: SettingsComponent, canActivate: [AuthGuard] },

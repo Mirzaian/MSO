@@ -3,6 +3,7 @@
 html,
 body {
   font-family: var(--telekom-typography-font-family-sans);
+  min-height: 100%;
 }
 
 body {

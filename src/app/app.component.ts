@@ -13,5 +13,5 @@ export class AppComponent {
   currentLanguage: string = 'de-DE';
   autoHide: boolean = false;
 
-  constructor(){}
+  constructor() { }
 }
