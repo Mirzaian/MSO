@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
     { type: 'divider' },
     { type: 'item', name: 'Kundenservice', id: 'user-support', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/support']) }) }, icon: 'service-support', iconPosition: 'prefix' },
     { type: 'divider' },
-    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['login']); }, variant: 'secondary' },
+    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['/login']); }, variant: 'secondary' },
   ];
 
   currentLanguage: string = 'de-DE';

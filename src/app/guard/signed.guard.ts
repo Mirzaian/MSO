@@ -12,7 +12,7 @@ export class SignedGuard implements CanActivate {
 
   canActivate() {
     if (this.service.isLoggedIn()) {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['/dashboard']);
       return false;
     }
 

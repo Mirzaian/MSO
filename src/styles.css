@@ -16,7 +16,6 @@ body {
 
 .container {
   width: 100%;
-  min-height: 100vh;
 }
 
 .my-translated-paragraph {
@@ -89,6 +88,7 @@ scale-notification-toast::part(base --opened) {
 .mb-100 {
   margin-bottom: 100px;
 }
+
 .mb-150 {
   margin-bottom: 150px;
 }

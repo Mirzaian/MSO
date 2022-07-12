@@ -5,12 +5,13 @@
 <div class="container">
     <div class="column left"></div>
     <div class="column middle df">
-        <div class="row mb-150">
+        <div class="row mb-100">
             <scale-card class="center" *ngFor="let card of cards">
                 <h3 class="mb-10">{{ card.name }}</h3>
                 <h1 class="tv-Center">{{ card.totalServer }}<span style="font-size:large"> {{ card?.format }}</span>
                 </h1>
             </scale-card>
         </div>
+        <div class="box1"></div>
     </div>
     <div class="column right"></div>

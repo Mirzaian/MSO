@@ -4,11 +4,11 @@
       {{ "overview.headline" | translate }}
     </h1>
     <h4>{{ directory?.name }}</h4>
-  </div> 
-    <scale-divider></scale-divider>
-    <div class="container mt-40">
-      <div class="row">
-        <div class="column left">
+  </div>
+  <scale-divider></scale-divider>
+  <div class="container mt-40">
+    <div class="row">
+      <div class="column left">
         <scale-sidebar-nav collapsible-label="Server Kategorien">
           <ng-container *ngTemplateOutlet="recursiveItem; context:{ list: connections }"></ng-container>
           <ng-template #recursiveItem let-list="list">
@@ -27,12 +27,13 @@
           </ng-template>
         </scale-sidebar-nav>
       </div>
-      </div>
+    </div>
     <div class="column middle">
-      <app-list
-      [cards]="serverlist">
+      <app-list [cards]="serverlist">
       </app-list>
     </div>
     <div class="column right"></div>
+  </div>
+  <div style="height: 500px; padding: 48px 0;">
   </div>
 </div>

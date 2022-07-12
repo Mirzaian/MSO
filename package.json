@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@angular/animations": "~13.3.11",
+    "@angular/cdk": "^14.0.4",
     "@angular/common": "~13.3.11",
     "@angular/compiler": "~13.3.11",
     "@angular/core": "^13.3.11",
@@ -20,9 +21,11 @@
     "@angular/router": "~13.3.11",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "@swimlane/ngx-charts": "^20.1.0",
     "@telekom/scale-components": "^3.0.0-beta.103",
     "@telekom/scale-components-angular": "^3.0.0-beta.103",
     "@telekom/scale-components-neutral": "^3.0.0-beta.103",
+    "angular-animations": "^0.11.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
@@ -31,6 +34,7 @@
     "@angular-devkit/build-angular": "~13.3.8",
     "@angular/cli": "^13.3.8",
     "@angular/compiler-cli": "~13.3.11",
+    "@types/d3-scale": "^4.0.2",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.7.0",
