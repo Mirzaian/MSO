@@ -12,7 +12,7 @@
   "dependencies": {
     "@angular/animations": "^14.0.5",
     "@angular/cdk": "^14.0.4",
-    "@angular/cli": "^13.3.8",
+    "@angular/cli": "^14.0.5",
     "@angular/common": "^14.0.5",
     "@angular/compiler": "^14.0.5",
     "@angular/core": "^14.0.5",
@@ -23,8 +23,8 @@
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "@telekom/scale-components": "^3.0.0-beta.103",
-    "@telekom/scale-components-angular": "^3.0.0-beta.103",
     "@telekom/scale-components-neutral": "^3.0.0-beta.103",
+    "@telekom/scale-components-angular": "^3.0.0-beta.103",
     "angular-animations": "^0.11.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
