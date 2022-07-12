@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComponentLibraryModule } from '@telekom/scale-components-angular';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 // Components
 import { AppComponent } from './app.component';
 import { FooterComponent } from '../app/components/overlay/footer/footer.component';
@@ -49,7 +48,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    NgxChartsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'de-DE',
       loader: {
