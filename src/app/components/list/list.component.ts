@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, NgModule, NO_ERRORS_SCHEMA, OnInit, Output } from '@angular/core';
 import { vmGroups, vmServer } from 'src/app/models/vm-groups';
 
 @Component({
