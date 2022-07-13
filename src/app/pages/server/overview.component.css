@@ -1,12 +1,15 @@
 .column {
   float: left;
 }
+
 .left {
   width: 25%;
 }
+
 .right {
   width: 25%;
 }
+
 .middle {
   width: 50%;
   text-align: center;

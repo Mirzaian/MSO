@@ -1,8 +1,11 @@
-<scale-app-header href="#" slot="header" id="header" 
-[mainNavigation]="isUserLoggedIn?mainNavigation:[]"
-[sectorNavigation]="languageNavigation"
-[iconNavigation]="isUserLoggedIn?iconNavigation:[]"
-[userNavigation]="isUserLoggedIn?userNavigation:[]"
-[activeSectorId]="currentLanguage">
+<scale-app-header href="#" slot="header" id="header"
+    [mainNavigation]="isUserLoggedIn?mainNavigation:[]"
+    [sectorNavigation]="languageNavigation"
+    [iconNavigation]="isUserLoggedIn?iconNavigation:[]"
+    [userNavigation]="isUserLoggedIn?userNavigation:[]"
+    [activeSectorId]="currentLanguage">
 </scale-app-header>
-<scale-text-field label="{{ 'warning.search-title' | translate }}" placeholder="{{ 'warning.search-input' | translate }}" *ngIf="isShown"></scale-text-field>
+<scale-text-field 
+    label="{{ 'warning.search-title' | translate }}"
+    placeholder="{{ 'warning.search-input' | translate }}" *ngIf="isShown">
+</scale-text-field>

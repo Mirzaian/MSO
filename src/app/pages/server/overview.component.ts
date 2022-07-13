@@ -13,17 +13,17 @@ export class OverviewComponent implements OnInit {
   serverlist: vmServer[] = [];
   directory: vmGroups;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getAll().subscribe((vmGroup => { this.connections = vmGroup}));
+    this.dataService.getAll().subscribe((vmGroup => { this.connections = vmGroup }));
   }
 
-    onClick(vmGroups: vmGroups) {
-      console.log(vmGroups.name)
-      this.directory = vmGroups
-      console.log(this.dataService.filter(vmGroups.category).subscribe(res => { this.serverlist =  res }))
-    }
+  onClick(vmGroups: vmGroups) {
+    console.log(vmGroups.name)
+    this.directory = vmGroups
+    console.log(this.dataService.filter(vmGroups.category).subscribe(res => { this.serverlist = res }))
+  }
 }
 
 
