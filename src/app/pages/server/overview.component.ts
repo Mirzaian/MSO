@@ -21,8 +21,8 @@ export class OverviewComponent implements OnInit {
 
   onClick(vmGroups: vmGroups) {
     console.log(vmGroups.name)
-    this.directory = vmGroups
-    console.log(this.dataService.filter(vmGroups.category).subscribe(res => { this.serverlist = res }))
+    this.directory = vmGroups;
+    this.dataService.filter(vmGroups.category).subscribe(res => { this.serverlist = res });
   }
 }
 

@@ -29,10 +29,9 @@
   },
   "warning": {
     "h1_headline": "Leider konnten wir die \n Seite nicht finden.",
-    "h1_top-line": "Wir empfehlen Ihnen, die Suchleiste zu nutzen, \n um Ihr gewünschtes Ziel zu finden.",
-    "h2_search-line": "Wonach suchen Sie?",
     "search-input": "Wonach suchen Sie?",
-    "search-title": "Suche"
+    "search-title": "Suche",
+    "button_title": "Zurück"
   },
   "dashboard": {
     "headline": "Übersicht"
