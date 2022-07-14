@@ -11,6 +11,8 @@ import { ComponentLibraryModule } from '@telekom/scale-components-angular';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+
+
 // Components
 import { AppComponent } from './app.component';
 import { FooterComponent } from '../app/components/overlay/footer/footer.component';
