@@ -3,6 +3,12 @@
     "language.english": "Englisch",
     "language.german": "Deutsch"
   },
+  "footer": {
+    "contact": "Contact",
+    "terms": "Terms and conditions",
+    "lg": "Legal notice",
+    "dp": "Data privacy"
+  },
   "mainNavigation": {
     "dashboard": "Dashboard",
     "server": "Server",

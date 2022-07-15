@@ -12,21 +12,13 @@ export class HeaderComponent implements OnInit {
 
   showOutMenu: boolean = false;
   isShown: boolean = false;
+  currentLanguage: string = 'de-DE';
+  isUserLoggedIn: boolean = false;
 
   mainNavigation = [
-    {
-      name: "Dashboard",
-      id: "dashboard",
-      onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard']) }) },
-      children: [],
-    },
-
-    {
-      name: "Server",
-      id: "server",
-      onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard/server/overview']) }) },
-      children: [],
-    }];
+    { name: "Dashboard", id: "dashboard", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard']) }) }, children: []},
+    { name: "Server", id: "server", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard/server/overview']) }) }, children: [],}
+  ];
 
   languageNavigation = [
     { name: "Deutsch", id: "de-DE", onClick: () => { this.ngZone.run(() => { this.selectLanguage("de-DE") }) } },
@@ -36,7 +28,6 @@ export class HeaderComponent implements OnInit {
   iconNavigation = [
     { name: "Search", id: "search", onClick: () => { this.ngZone.run(() => { this.isShown = !this.isShown }) }, icon: "action-search" },
   ];
-
 
   userNavigation = [
     { type: 'userInfo', shortName: 'Kevin', name: 'Kevin Mirzaian', email: 'k.mirzaian@telekom.de' },
@@ -48,9 +39,6 @@ export class HeaderComponent implements OnInit {
     { type: 'divider' },
     { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['/login']); }, variant: 'secondary' },
   ];
-
-  currentLanguage: string = 'de-DE';
-  isUserLoggedIn: boolean = false;
 
   constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService: UserService) {
     this.translateService.getTranslation(this.currentLanguage).subscribe(() => { this.loadTranslations() })

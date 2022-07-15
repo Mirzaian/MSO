@@ -3,6 +3,12 @@
     "language.english": "Englisch",
     "language.german": "Deutsch"
   },
+  "footer": {
+    "contact": "Kontakt",
+    "terms": "Nutzungsbedinungen",
+    "lg": "Impressum",
+    "dp": "Datenschutz"
+  },
   "mainNavigation": {
     "dashboard": "Übersicht",
     "server": "Server"
@@ -41,7 +47,7 @@
   },
   "server": {
     "headline": "Server Informationen",
-    "system" : {
+    "system": {
       "operating-system": "Betriebssystem:",
       "processor": "Prozessor:",
       "memory": "Arbeitsspeicher:",

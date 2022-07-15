@@ -1,3 +1,4 @@
+<div class="wrapper">
 <h1 class="tv-Center mb-30">
     {{ "dashboard.headline" | translate }}
 </h1>
@@ -5,27 +6,108 @@
 <div class="container mt-40">
     <div class="column left"></div>
     <div class="column middle df">
-        <div class="row mb-100">
+        <div class="row mb-30">
             <scale-card *ngFor="let card of cards">
                 <h3 class="mb-10">{{ card.name }}</h3>
                 <h1 class="tv-Center">{{ card.totalServer }}<span style="font-size:large"> {{ card?.format }}</span>
                 </h1>
             </scale-card>
         </div>
-        <div class="row mb-100">
-            <div class="column middle">
-                <scale-card style="max-height: 250px;">
+        <div class="row">
+            <div class="row middle df">
+                <scale-card class="chart-l">
                     <h3 class="tv-Center">Server Standorte</h3>
-                <ngx-charts-advanced-pie-chart [view?]="view" [scheme?]="colorScheme" [results]="chart"
-                    [gradient]="gradient" (select)="onSelect($event)" (activate)="onActivate($event)"
-                    (deactivate)="onDeactivate($event)">
-                </ngx-charts-advanced-pie-chart>
-            </scale-card>
+                    <ngx-charts-advanced-pie-chart [view?]="view" [scheme?]="colorScheme" [results]="chart"
+                        [gradient]="gradient" (select)="onSelect($event)" (activate)="onActivate($event)"
+                        (deactivate)="onDeactivate($event)">
+                    </ngx-charts-advanced-pie-chart>
+                </scale-card>
             </div>
+            <scale-card class="row">
+                <h3 class="tv-Center mb-30">Serverliste</h3>
+                <scale-table class="tv-Center" size="default">
+                    <table>
+                        <!-- Add visibility CSS to caption, to not show the caption. For example shifting it out of the view -->
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Servername</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Administration</td>
+                                <td>CATEGORY 1</td>
+                                <td>
+                                    <scale-icon-alert-success fill="#00b367" size="24" selected
+                                        accessibility-title="Online">
+                                    </scale-icon-alert-success>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Administration</td>
+                                <td>CATEGORY 2</td>
+                                <td>
+                                    <scale-icon-alert-success fill="#00b367" size="24" selected
+                                        accessibility-title="Online">
+                                    </scale-icon-alert-success>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Administration</td>
+                                <td>CATEGORY 3</td>
+                                <td>
+                                    <scale-icon-alert-success fill="#00b367" size="24" selected
+                                        accessibility-title="Online">
+                                    </scale-icon-alert-success>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Administration</td>
+                                <td>CATEGORY 4</td>
+                                <td>
+                                    <scale-icon-alert-success fill="#00b367" size="24" selected
+                                        accessibility-title="Online">
+                                    </scale-icon-alert-success>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>D3 Ausbildung</td>
+                                <td>CATEGORY 1</td>
+                                <td>
+                                    <scale-icon-alert-success fill="#00b367" size="24" selected
+                                        accessibility-title="Online">
+                                    </scale-icon-alert-success>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>D3 Ausbildung</td>
+                                <td>CATEGORY 2</td>
+                                <td>
+                                    <scale-icon-alert-success fill="#00b367" size="24" selected
+                                        accessibility-title="Online">
+                                    </scale-icon-alert-success>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>D3 Ausbildung</td>
+                                <td>CATEGORY 3</td>
+                                <td>
+                                    <scale-icon-alert-success fill="#00b367" size="24" selected
+                                        accessibility-title="Online">
+                                    </scale-icon-alert-success>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </scale-table>
+            </scale-card>
         </div>
     </div>
     <div class="column right">
     </div>
-    <div style="height: 50px; padding: 48px 0;">
-    </div>
+</div>
+<div style="height: 100px; padding: 48px 0;">
+</div>
 </div>
