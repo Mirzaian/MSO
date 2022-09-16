@@ -1,19 +1,15 @@
-.column {
-  float: left;
+.sidebar-nav {
+  height: 100vh;
+  max-height: 300vh;
+  overflow: auto;
 }
 
-.left {
-  width: 25%;
+.cards {
+  height: 100vh;
+  max-height: 1000vh;
+  overflow: auto;
 }
 
-.right {
-  width: 25%;
-}
-
-.middle {
-  width: 50%;
-  text-align: center;
-}
 
 /* If the screen size is 600px wide or less, hide the element */
 @media only screen and (max-width: 600px) {

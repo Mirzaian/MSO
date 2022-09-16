@@ -9,14 +9,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AuthGuard } from './guard/auth.guard';
 import { SignedGuard } from './guard/signed.guard';
+import { ContactComponent } from './pages/footer/contact/contact.component';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent, canActivate: [SignedGuard], pathMatch: 'full' }, // redirect to `login`
+  { path: '', component: LoginComponent, canActivate: [SignedGuard], pathMatch: 'full' }, // redirect to `login`
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'account/information', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'account/settings', component: SettingsComponent, canActivate: [AuthGuard] },
   { path: 'dashboard/server/overview', component: OverviewComponent, canActivate: [AuthGuard] },
+  { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent }  // Route for 404 page
 ];
 

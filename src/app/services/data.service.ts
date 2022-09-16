@@ -192,6 +192,24 @@ export class DataService {
       os: "windows"
     },
     {
+      id: 1,
+      name: "CATEGORY 1",
+      category: 1,
+      os: "windows"
+    },
+    {
+      id: 1,
+      name: "CATEGORY 1",
+      category: 1,
+      os: "windows"
+    },
+    {
+      id: 1,
+      name: "CATEGORY 1",
+      category: 1,
+      os: "windows"
+    },
+    {
       id: 2,
       name: "CATEGORY 1",
       category: 1,

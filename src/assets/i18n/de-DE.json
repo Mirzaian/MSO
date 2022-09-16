@@ -23,14 +23,12 @@
     "logout": "Abmelden"
   },
   "login": {
-    "login_headline": "Willkommen bei",
-    "login_headline-ultra": "MSO",
-    "login-form_top-line": "Bitte logge dich ein, um diese Inhalte anzuzeigen.",
-    "login-label-mail": "Benutzername",
-    "login-label-password": "Passwort",
-    "login-label-forgot-password": "Passwort vergessen?",
-    "login-submit": "Anmelden",
-    "login-successful": "Erfolgreich angemeldet",
+    "subtitle": "Willkommen bei",
+    "title": "MSO",
+    "tv-info": "Bitte logge dich ein, um diese Inhalte anzuzeigen.",
+    "label-mail": "Benutzername",
+    "label-password": "Passwort",
+    "submit": "Anmelden",
     "notification-message": "Hinweis: Login mit deinem Domänen Passwort (EMEA1/EMEA2) oder als Externer mit ZAM Passwort"
   },
   "warning": {
@@ -42,10 +40,10 @@
   "dashboard": {
     "headline": "Übersicht"
   },
-  "overview": {
-    "headline": "Server"
-  },
   "server": {
+    "title": "Server"
+  },
+  "details": {
     "headline": "Server Informationen",
     "system": {
       "operating-system": "Betriebssystem:",
@@ -73,5 +71,15 @@
     "input-new": "Bitte geben Sie ihr neues Passwort ein",
     "input-confirm": "Bitte bestätigen Sie ihr neues Passwort",
     "save": "Speichern"
+  },
+  "contact": {
+    "headline": "Kontaktformular",
+    "sub-title": "Hier hast du die Möglichkeit uns zu kontaktieren.",
+    "notification-message": "Bitte fülle alle Felder aus, damit wir dein Anliegen schnellstmöglich bearbeiten können.",
+    "label-firstname": "Vorname",
+    "label-lastname": "Nachname",
+    "label-kind": "Art des Anliegens",
+    "label-textarea": "Bitte beschreiben Sie uns Ihr Anliegen.",
+    "btn-send": "Abschicken"
   }
 }

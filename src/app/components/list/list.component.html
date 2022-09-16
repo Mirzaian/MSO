@@ -1,96 +1,87 @@
 <!-- Card view -->
-<div class="wrapper">
-    <div class="box ib center" *ngFor="let card of cards">
-        <scale-card (click)="openModal(card)">
-            <div class="center df">
-                <ng-container [ngSwitch]="card.os">
-                    <img width="100px" height="auto" style="max-width: 100%;" alt="Windows" *ngSwitchCase="'windows'"
-                        src="assets/images/os/windows.png">
-                    <img width="100px" height="auto" style="max-width: 100%;" alt="Ubuntu" *ngSwitchCase="'ubuntu'"
-                        src="assets/images/os/ubuntu.png">
-                    <img width="100px" height="auto" style="max-width: 100%;" alt="macOS" *ngSwitchCase="'macos'"
-                        src="assets/images/os/macos.png">
-                    <img width="100px" height="auto" style="max-width: 100%;" alt="Debian" *ngSwitchCase="'debian'"
-                        src="assets/images/os/debian.png">
-                </ng-container>
-            </div>
-            <h4 class="tv-Center mt-40">Servername:</h4>
-            <p class="tv-Thin tv-Center" style="padding-top:15px;">{{ card.name }}</p>
-            <div class="mt-20 center tv-Center">
+<div class="ib text-center p-5 animate__animated animate__backInRight" *ngFor="let card of cards">
+    <scale-card (click)="openModal(card)">
+        <ng-container [ngSwitch]="card.os">
+            <img alt="Windows" *ngSwitchCase="'windows'" src="assets/images/os/windows.png">
+            <img alt="Ubuntu" *ngSwitchCase="'ubuntu'" src="assets/images/os/ubuntu.png">
+            <img alt="macOS" *ngSwitchCase="'macos'" src="assets/images/os/macos.png">
+            <img alt="Debian" *ngSwitchCase="'debian'" src="assets/images/os/debian.png">
+        </ng-container>
+            <h4>Servername:</h4>
+            <p>{{ card.name }}</p>
+            <div class="mt-20">
                 <h5>Status</h5>
                 <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
                 </scale-icon-alert-success>
             </div>
-        </scale-card>
-        <!-- Modal view -->
-        <scale-modal heading="{{ 'server.headline' | translate }}" id="modal">
-            <div class="content ib">
-                <h3 class="tv-Left">System
-                    <span class="pull-right">
-                        <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
-                        </scale-icon-alert-success>
-                    </span>
-                    <scale-divider></scale-divider>
-                </h3>
-                <h4 type="text" id="servername" class="box1">Name:</h4>
-                <p type="text" id="servername" class="box2">{{ selectedServer?.name}}</p>
-                <h4 type="text" id="servername" class="box1">{{ "server.system.operating-system" | translate }}</h4>
-                <p type="text" id="servername" class="box2">Windows Server 2019</p>
-                <h4 type="text" id="servername" class="box1">{{ "server.system.processor" | translate }}</h4>
-                <p type="text" id="servername" class="box2">Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz</p>
-                <h4 type="text" id="servername" class="box1">{{ "server.system.memory" | translate }}</h4>
-                <p type="text" id="servername" class="box2">30 GB</p>
-                <h4 type="text" id="servername" class="box1">{{ "server.system.hard-disk-storage" | translate }}</h4>
-                <p type="text" id="servername" class="box2">500 GB</p>
-                <h3 class="tv-Left">{{ "server.network.headline" | translate }}
-                    <scale-divider></scale-divider>
-                </h3>
-                <h4 type="text" id="servername" class="box1">IPv4:</h4>
-                <p type="text" id="servername" class="box2">79.208.243.152</p>
-                <h4 type="text" id="servername" class="box1">IPv6:</h4>
-                <p type="text" id="servername" class="box2">2003:E6:170F:8D13:F109:A472:39D3:9C2A</p>
-                <h4 type="text" id="servername" class="box1">{{ "server.network.location" | translate }}</h4>
-                <p type="text" id="servername" class="box2">Deutschland</p>
-                <h3 class="tv-Left">{{ "server.applications" | translate }}
-                    <scale-divider></scale-divider>
-                </h3>
-                <scale-table size="small">
-                    <table>
-                        <thead>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Spotify</td>
-                            </tr>
-                            <tr>
-                                <td>Teamspeak</td>
-                            </tr>
-                            <tr>
-                                <td>Outlook</td>
-                            </tr>
-                            <tr>
-                                <td>Word</td>
-                            </tr>
-                            <tr>
-                                <td>Powerpoint</td>
-                            </tr>
-                            <tr>
-                                <td>Visual Studio Code</td>
-                            </tr>
-                            <tr>
-                                <td>Google Chrome</td>
-                            </tr>
-                            <tr>
-                                <td>Firefox</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </scale-table>
-            </div>
-            <scale-button slot="action" variant="secondary" (click)="closeModal()">
-                {{ "server.cancel" | translate }}
-            </scale-button>
-        </scale-modal>
-    </div>
-    <div class="space"></div>
+    </scale-card>
+    <!-- Modal view -->
+    <scale-modal heading="{{ 'server.headline' | translate }}" id="modal">
+        <div class="content ib">
+            <h3 class="tv-Left">System
+                <span class="pull-right">
+                    <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
+                    </scale-icon-alert-success>
+                </span>
+                <scale-divider></scale-divider>
+            </h3>
+            <h4 type="text" id="servername" class="box1">Name:</h4>
+            <p type="text" id="servername" class="box2">{{ selectedServer?.name}}</p>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.operating-system" | translate }}</h4>
+            <p type="text" id="servername" class="box2">Windows Server 2019</p>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.processor" | translate }}</h4>
+            <p type="text" id="servername" class="box2">Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz</p>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.memory" | translate }}</h4>
+            <p type="text" id="servername" class="box2">30 GB</p>
+            <h4 type="text" id="servername" class="box1">{{ "server.system.hard-disk-storage" | translate }}</h4>
+            <p type="text" id="servername" class="box2">500 GB</p>
+            <h3 class="tv-Left">{{ "server.network.headline" | translate }}
+                <scale-divider></scale-divider>
+            </h3>
+            <h4 type="text" id="servername" class="box1">IPv4:</h4>
+            <p type="text" id="servername" class="box2">79.208.243.152</p>
+            <h4 type="text" id="servername" class="box1">IPv6:</h4>
+            <p type="text" id="servername" class="box2">2003:E6:170F:8D13:F109:A472:39D3:9C2A</p>
+            <h4 type="text" id="servername" class="box1">{{ "server.network.location" | translate }}</h4>
+            <p type="text" id="servername" class="box2">Deutschland</p>
+            <h3 class="tv-Left">{{ "server.applications" | translate }}
+                <scale-divider></scale-divider>
+            </h3>
+            <scale-table size="small">
+                <table>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Spotify</td>
+                        </tr>
+                        <tr>
+                            <td>Teamspeak</td>
+                        </tr>
+                        <tr>
+                            <td>Outlook</td>
+                        </tr>
+                        <tr>
+                            <td>Word</td>
+                        </tr>
+                        <tr>
+                            <td>Powerpoint</td>
+                        </tr>
+                        <tr>
+                            <td>Visual Studio Code</td>
+                        </tr>
+                        <tr>
+                            <td>Google Chrome</td>
+                        </tr>
+                        <tr>
+                            <td>Firefox</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </scale-table>
+        </div>
+        <scale-button slot="action" variant="secondary" (click)="closeModal()">
+            {{ "server.cancel" | translate }}
+        </scale-button>
+    </scale-modal>
 </div>

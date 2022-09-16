@@ -21,6 +21,6 @@ export class UserService {
   logout() {
     this.isUserLoggedIn$.next(false)
     localStorage.removeItem('loginStatus')
-    this.router.navigate(['login'])
+    this.router.navigate([''])
   }
 }

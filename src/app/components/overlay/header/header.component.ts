@@ -16,8 +16,8 @@ export class HeaderComponent implements OnInit {
   isUserLoggedIn: boolean = false;
 
   mainNavigation = [
-    { name: "Dashboard", id: "dashboard", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard']) }) }, children: []},
-    { name: "Server", id: "server", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard/server/overview']) }) }, children: [],}
+    { name: "Dashboard", id: "dashboard", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard']) }) }, children: [] },
+    { name: "Server", id: "server", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard/server/overview']) }) }, children: [], }
   ];
 
   languageNavigation = [
@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
     { type: 'divider' },
     { type: 'item', name: 'Kundenservice', id: 'user-support', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/support']) }) }, icon: 'service-support', iconPosition: 'prefix' },
     { type: 'divider' },
-    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['/login']); }, variant: 'secondary' },
+    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['/']); }, variant: 'secondary' },
   ];
 
   constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService: UserService) {

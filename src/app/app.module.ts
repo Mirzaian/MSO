@@ -11,8 +11,6 @@ import { ComponentLibraryModule } from '@telekom/scale-components-angular';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-
-
 // Components
 import { AppComponent } from './app.component';
 import { FooterComponent } from '../app/components/overlay/footer/footer.component';
@@ -25,7 +23,10 @@ import { InfoComponent } from './pages/account/info/info.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './pages/server/overview.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-
+import { ContactComponent } from './pages/footer/contact/contact.component';
+import { TermsComponent } from './pages/footer/terms/terms.component';
+import { DataPrivacyComponent } from './pages/footer/data-privacy/data-privacy.component';
+import { LegalNoticeComponent } from './pages/footer/legal-notice/legal-notice.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -41,7 +42,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     ListComponent,
     SettingsComponent,
     InfoComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContactComponent,
+    TermsComponent,
+    DataPrivacyComponent,
+    LegalNoticeComponent
   ],
   imports: [
     BrowserModule,

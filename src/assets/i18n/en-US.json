@@ -29,14 +29,12 @@
     "logout": "Logout"
   },
   "login": {
-    "login_headline": "Welcome to",
-    "login_headline-ultra": "MSO",
-    "login-form_top-line": "Please login to view this content.",
-    "login-label-mail": "Username",
-    "login-label-password": "Password",
-    "login-label-forgot-password": "Password forgotten?",
-    "login-submit": "Login",
-    "login-successful": "Successful login!",
+    "subtitle": "Welcome to",
+    "title": "MSO",
+    "tv-info": "Please login to view this content.",
+    "label-mail": "Username",
+    "label-password": "Password",
+    "submit": "Login",
     "notification-message": "Hint: Login with your domain password (EMEA1/EMEA2) or as external with ZAM password"
   },
   "warning": {
@@ -48,10 +46,10 @@
   "dashboard": {
     "headline": "Dashboard"
   },
-  "overview": {
-    "headline": "Dashboard"
-  },
   "server": {
+    "title": "Dashboard"
+  },
+  "details": {
     "headline": "Server information",
     "system" : {
       "operating-system": "Operating System:",
@@ -79,5 +77,9 @@
     "input-new": "Please enter your new password",
     "input-confirm": "Please confirm your new password",
     "save": "Save"
+  },
+  "contact": {
+    "headline": "Kontaktformular",
+    "sub-title": "Here you can contact us. \n"
   }
 }

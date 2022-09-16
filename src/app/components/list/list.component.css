@@ -1,35 +1,42 @@
-.box {
-    width: 250px;
-    max-width: 300px;
-    margin: 0 1em;
+ng-container {
+    margin: auto;
+    display: flex;
 }
-.content {
-    width: 100%;
+
+img {
+    width: 100px;
+    height: auto;
+    max-width: 100%;
 }
+
 .h3 {
     margin-right: 50px;
 }
+
 .box1 {
     display: inline-block;
     text-align: left;
     width: 220px;
-    line-height:0px;
+    line-height: 0px;
 }
+
 .box2 {
     text-align: left;
     width: 350px;
     line-height: 0px;
     display: inline-block;
 }
-.space {
-    height: 100px;
-    padding: 40px 0;
+
+p {
+    padding-top: 15px;
+    font-weight: var(--telekom-typography-font-weight-thin);
+}
+
+h4 {
+    margin-top: 40px;
 }
 
 /* If the screen size is 600px wide or less, hide the element */
 @media only screen and (max-width: 600px) {
-    div.space {
-        height: 0px;
-        padding: 0px 0;
-    }
-  }
+
+}

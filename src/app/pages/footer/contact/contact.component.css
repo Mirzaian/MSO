@@ -1,0 +1,8 @@
+.contact-form {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 600px;
+}
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 900px) {}

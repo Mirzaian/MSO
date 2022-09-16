@@ -1,27 +1,34 @@
-.login_headline {
+.subtitle {
   text-align: center;
   color: var(--telekom-color-text-and-icon-standard);
   font-size: var(--telekom-typography-font-size-title-2);
   font-weight: var(--telekom-typography-font-weight-thin);
 }
-.login_headline-ultra {
+
+.title {
   font-weight: var(--telekom-typography-font-weight-extra-bold);
 }
-.login-form {
-  margin: 0 auto;
-  text-align: left;
-  max-width: 600px;
-}
-.login-form_top-line {
+
+.tv-info {
   text-align: center;
   color: var(--telekom-color-text-and-icon-standard);
   font-size: var(--telekom-typography-font-size-callout);
 }
-.login-label-mail {
-  color: var(--telekom-color-text-and-icon-standard);
-  font-size: var(--telekom-typography-font-size-callout);
+
+.login-form {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 60vh;
+  height: 80vh;
 }
-.login-label-password {
-  color: var(--telekom-color-text-and-icon-standard);
-  font-size: var(--telekom-typography-font-size-callout);
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+  .login-form {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 40vh;
+    height: 90vh;
+  }
 }
