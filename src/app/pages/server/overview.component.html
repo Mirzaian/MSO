@@ -7,8 +7,8 @@
   </div>
   <scale-divider></scale-divider>
   <div class="mt-40">
-    <div class="row df animate__animated animate__backInLeft">
-      <div class="col-md-2 sidebar-nav">
+    <div class="row fanimate__animated animate__backInLeft">
+      <div class="col-md-3 sidebar-nav">
         <scale-sidebar-nav collapsible-label="Server Kategorien">
           <ng-container *ngTemplateOutlet="recursiveItem; context:{ list: connections }"></ng-container>
           <ng-template #recursiveItem let-list="list">
@@ -27,7 +27,7 @@
           </ng-template>
         </scale-sidebar-nav>
       </div>
-      <div class="cards col-md-10 center">
+      <div class="cards col-md-8 text-center">
         <app-list [cards]="serverlist">
         </app-list>
       </div>
