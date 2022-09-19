@@ -1,5 +1,5 @@
 <p align="left">
-  <a href="https://github.com/razamtv"><img src="https://readme-typing-svg.herokuapp.com?color=E20074&lines=Miniplan+Server+Overview;Clear+view+of+Servers;Apprentice+Project;Always+learning+new+things"></a>
+  <a href="https://github.com/mirzaian"><img src="https://readme-typing-svg.herokuapp.com?color=E20074&lines=Miniplan+Server+Overview;Clear+view+of+Servers;Apprentice+Project;Always+learning+new+things"></a>
 </p>
 
 
@@ -11,7 +11,7 @@ Here is a short introduction how to install and develop the application on a win
 ### Prerequisites
 
 First of all we need Node.js and npm.
-Install desired Nodejs version. (nodejs v16.15.0 / npm v8.12.2)
+Install desired Nodejs version. (nodejs v12.20.1 / npm v6.14.13)
 * Step 1
   ```sh
   https://nodejs.org/
@@ -30,7 +30,7 @@ Now we go step for step, how to install the project.
 
 1. Now start the Terminal and we install the used framework Angular to get the project work.(based on version 14)
    ```sh
-   npm install @angular/cli@14
+   npm install @angular/cli@13
    ```
 2. In the next step, we clone the repo
    ```sh
