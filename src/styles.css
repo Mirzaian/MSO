@@ -2,22 +2,26 @@
 
 html,
 body {
+  margin: 0;
   font-family: var(--telekom-typography-font-family-sans);
+  color: var(--scl-color-text-standard);
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 150vh;
+  overflow-y: auto !important;
+  overflow-x: hidden;
 }
+
 
 scale-card {
   display: block;
   background: var(--telekom-color-background-surface);
   transition: all var(--telekom-motion-duration-transition) var(--telekom-motion-easing-standard);
   border-radius: var(--telekom-radius-large);
-  box-shadow: var(--telekom-shadow-raised-standard);
 }
+
 scale-card:hover {
   cursor: pointer;
   box-shadow: var(--telekom-shadow-raised-hover);
@@ -170,6 +174,9 @@ scale-notification-toast::part(base --opened) {
   float: none
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-align: center;
 }
