@@ -7,81 +7,54 @@
             <img alt="macOS" *ngSwitchCase="'macos'" src="assets/images/os/macos.png">
             <img alt="Debian" *ngSwitchCase="'debian'" src="assets/images/os/debian.png">
         </ng-container>
-            <h4>Servername:</h4>
-            <p>{{ card.name }}</p>
-            <div class="mt-20">
-                <h5>Status</h5>
-                <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
-                </scale-icon-alert-success>
-            </div>
+        <h4>Servername:</h4>
+        <p>{{ card.name }}</p>
+        <div class="mt-20">
+            <h5>Status</h5>
+            <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
+            </scale-icon-alert-success>
+        </div>
     </scale-card>
 </div>
-    <!-- Modal view -->
-    <scale-modal heading="{{ 'details.headline' | translate }}" id="modal">
-        <div class="content ib">
-            <h3 class="tv-Left">System
-                <span class="pull-right">
-                    <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
-                    </scale-icon-alert-success>
-                </span>
+<!-- Modal view -->
+<scale-modal heading="{{ 'details.headline' | translate }}" id="modal">
+        <div class="row center tv-center">
+            <div class="col-9 mb-2 mt-0">
+                <h3>System</h3>
                 <scale-divider></scale-divider>
-            </h3>
-            <h4 type="text" id="servername" class="box1">Name:</h4>
-            <p type="text" id="servername" class="box2">{{ selectedServer?.name}}</p>
-            <h4 type="text" id="servername" class="box1">{{ "details.system.operating-system" | translate }}</h4>
-            <p type="text" id="servername" class="box2">Windows Server 2019</p>
-            <h4 type="text" id="servername" class="box1">{{ "details.system.processor" | translate }}</h4>
-            <p type="text" id="servername" class="box2">Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz</p>
-            <h4 type="text" id="servername" class="box1">{{ "details.system.memory" | translate }}</h4>
-            <p type="text" id="servername" class="box2">30 GB</p>
-            <h4 type="text" id="servername" class="box1">{{ "details.system.hard-disk-storage" | translate }}</h4>
-            <p type="text" id="servername" class="box2">500 GB</p>
-            <h3 class="tv-Left">{{ "details.network.headline" | translate }}
-                <scale-divider></scale-divider>
-            </h3>
-            <h4 type="text" id="servername" class="box1">IPv4:</h4>
-            <p type="text" id="servername" class="box2">79.208.243.152</p>
-            <h4 type="text" id="servername" class="box1">IPv6:</h4>
-            <p type="text" id="servername" class="box2">2003:E6:170F:8D13:F109:A472:39D3:9C2A</p>
-            <h4 type="text" id="servername" class="box1">{{ "details.network.location" | translate }}</h4>
-            <p type="text" id="servername" class="box2">Deutschland</p>
-            <h3 class="tv-Left">{{ "details.applications" | translate }}
-                <scale-divider></scale-divider>
-            </h3>
-            <scale-table size="small">
-                <table>
-                    <thead>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Spotify</td>
-                        </tr>
-                        <tr>
-                            <td>Teamspeak</td>
-                        </tr>
-                        <tr>
-                            <td>Outlook</td>
-                        </tr>
-                        <tr>
-                            <td>Word</td>
-                        </tr>
-                        <tr>
-                            <td>Powerpoint</td>
-                        </tr>
-                        <tr>
-                            <td>Visual Studio Code</td>
-                        </tr>
-                        <tr>
-                            <td>Google Chrome</td>
-                        </tr>
-                        <tr>
-                            <td>Firefox</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </scale-table>
+            </div>
+            <div class="col-4 text-left">
+                Name:
+            </div>
+            <div class="col-6 text-right">
+                {{ selectedServer?.name}}
+            </div>
+            <div class="col-4 text-left">
+                {{ "details.system.operating-system" | translate }}
+            </div>
+            <div class="col-6 text-right">
+                Windows Server 2019
+            </div>
+            <div class="col-4">
+                {{ "details.system.memory" | translate }}
+            </div>
+            <div class="col-6">
+                30 GB
+            </div>
+            <div class="col-4">
+                {{ "details.system.processor" | translate }}
+            </div>
+            <div class="col-6">
+                Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz
+            </div>
+            <div class="col-4">
+                {{ "details.system.hard-disk-storage" | translate }}
+            </div>
+            <div class="col-6">
+                500 GB
+            </div>
         </div>
-        <scale-button slot="action" variant="secondary" (click)="closeModal()">
-            {{ "details.cancel" | translate }}
-        </scale-button>
-    </scale-modal>
+    <scale-button slot="action" variant="secondary" (click)="closeModal()">
+        {{ "details.cancel" | translate }}
+    </scale-button>
+</scale-modal>

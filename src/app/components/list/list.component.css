@@ -10,7 +10,11 @@ img {
 }
 
 .h3 {
-    margin-right: 50px;
+    text-align: left !important;
+}
+
+.h4 {
+    text-align: left !important;
 }
 
 .box1 {
