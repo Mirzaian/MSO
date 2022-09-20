@@ -189,85 +189,169 @@ export class DataService {
       id: 1,
       name: "CATEGORY 1",
       category: 1,
-      os: "windows"
+      os: "macos",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 1,
       name: "CATEGORY 1",
       category: 1,
-      os: "windows"
+      os: "windows",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 1,
       name: "CATEGORY 1",
       category: 1,
-      os: "windows"
+      os: "windows",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 1,
       name: "CATEGORY 1",
       category: 1,
-      os: "windows"
+      os: "windows",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 2,
       name: "CATEGORY 1",
       category: 1,
-      os: "ubuntu"
+      os: "ubuntu",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 3,
       name: "CATEGORY 1",
       category: 1,
-      os: "windows"
+      os: "windows",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 4,
       name: "CATEGORY 1",
       category: 1,
-      os: "macos"
+      os: "windows",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 5,
       name: "CATEGORY 2",
       category: 2,
-      os: "debian"
+      os: "windows",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 6,
       name: "CATEGORY 2",
       category: 2,
-      os: "windows"
+      os: "macos",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 7,
       name: "CATEGORY 2",
       category: 2,
-      os: "windows"
+      os: "ubuntu",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 8,
       name: "CATEGORY 3",
       category: 3,
-      os: "windows"
+      os: "macos",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 9,
       name: "CATEGORY 3",
       category: 3,
-      os: "macos"
+      os: "windows",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 10,
       name: "he42123 D3 Server 1",
       category: 4,
-      os: "debian"
+      os: "macos",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
     {
       id: 11,
       name: "he42123 D3 Server 2",
       category: 4,
-      os: "debian"
+      os: "macos",
+      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+      memory: 30,
+      hdStorage: 500,
+      ipv4: "79.208.243.152",
+      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+      location: "Deutschland"
     },
   ]
 

@@ -1,3 +1,4 @@
+
 export interface vmGroups {
     id: number;
     name: string;
@@ -9,7 +10,14 @@ export interface vmServer {
     name: string;
     category: number;
     os: string;
+    processor: string;
+    memory: number;
+    hdStorage: number;
+    ipv4: string;
+    ipv6: string;
+    location: string;
 }
+
 export interface vmEntry {
     id: number;
     name: string;

@@ -56,7 +56,9 @@
       "location": "Standort:"
     },
     "applications": "Anwendungen",
-    "cancel": "Schließen"
+    "cancel": "Schließen",
+    "start": "Server starten",
+    "maintenance": "Wartung durchführen"
   },
   "info": {
     "headline": "Benutzerinformationen",

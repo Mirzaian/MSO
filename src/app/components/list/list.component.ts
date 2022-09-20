@@ -11,6 +11,7 @@ export class ListComponent implements OnInit {
   selectedServer: vmServer;
 
   @Input() cards: vmServer[] = [];
+  @Input() details: vmServer[] = [];
 
   constructor() { }
 

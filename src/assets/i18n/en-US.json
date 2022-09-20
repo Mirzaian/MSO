@@ -62,7 +62,9 @@
       "location": "Location:"
     },
     "applications": "Applications",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "start": "Start server",
+    "maintenance": "Maintenance"
   },
   "info": {
     "headline": "Account information",

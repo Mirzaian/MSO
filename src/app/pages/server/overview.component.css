@@ -1,17 +1,28 @@
 .sidebar-nav {
-  overflow: auto;
+  cursor: pointer;
 }
-
-.cards {
-  overflow: auto;
-}
-
 
 /* If the screen size is 900px wide or less, hide the element */
 @media only screen and (max-width: 900px) {
 
   .sidebar-nav {
     width: 50%;
+    margin: center;
+
+  }
+
+  .cards {
+    width: 100%;
+    margin: center;
+    text-align: center;
+  }
+}
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+
+  .sidebar-nav {
+    width: 100%;
     margin: center;
 
   }
