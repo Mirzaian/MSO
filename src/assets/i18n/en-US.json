@@ -11,13 +11,7 @@
   },
   "mainNavigation": {
     "dashboard": "Dashboard",
-    "server": "Server",
-    "overview": "Overview",
-    "basic-checks": "Basic checks",
-    "uptime": "Uptime",
-    "advanced-checks": "Advanced checks",
-    "page-speed": "Page Speed",
-    "transaction": "Transaction"    
+    "server": "Server"  
   },
   "iconNavigation": {
     "search": "Search"
@@ -61,7 +55,11 @@
       "headline": "Network",
       "location": "Location:"
     },
-    "applications": "Applications",
+    "applications": {
+      "title": "Applications",
+      "memory": "RAM",
+      "btn": "Action"
+    },
     "cancel": "Cancel",
     "start": "Start server",
     "shutdown": "Shutdown",

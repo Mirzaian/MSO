@@ -15,8 +15,7 @@
                 accessibility-title="Online">
             </scale-icon-alert-success>
             <ng-template #warningIcon>
-                <scale-icon-alert-warning fill="#e82010" size="24"
-                    accessibility-title="Offline">
+                <scale-icon-alert-warning fill="#e82010" size="24" accessibility-title="Offline">
                 </scale-icon-alert-warning>
             </ng-template>
 
@@ -28,14 +27,13 @@
     <div class="container">
         <h3 class="tv-Left">System
             <span class="pull-right">
-                <scale-icon-alert-success *ngIf="selectedServer?.status; else warningIcon" fill="#00b367" size="24" selected
-                accessibility-title="Online">
-            </scale-icon-alert-success>
-            <ng-template #warningIcon>
-                <scale-icon-alert-warning fill="#e82010" size="24"
-                    accessibility-title="Offline">
-                </scale-icon-alert-warning>
-            </ng-template>
+                <scale-icon-alert-success *ngIf="selectedServer?.status; else warningIcon" fill="#00b367" size="24"
+                    selected accessibility-title="Online">
+                </scale-icon-alert-success>
+                <ng-template #warningIcon>
+                    <scale-icon-alert-warning fill="#e82010" size="24" accessibility-title="Offline">
+                    </scale-icon-alert-warning>
+                </ng-template>
             </span>
         </h3>
         <div class="row">
@@ -70,7 +68,7 @@
             </div>
         </div>
         <scale-divider></scale-divider>
-        <h3 class="tv-Left mt-2">{{ "details.applications" | translate }}
+        <h3 class="tv-Left mt-2">{{ "details.applications.title" | translate }}
         </h3>
         <div class="row">
             <div class="box3">
@@ -81,8 +79,8 @@
                                 <th>Name</th>
                                 <th>Status</th>
                                 <th>CPU</th>
-                                <th>Arbeitsspeicher</th>
-                                <th>Aktion</th>
+                                <th>{{ "details.applications.memory" | translate }}</th>
+                                <th>{{ "details.applications.btn" | translate }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -98,10 +96,13 @@
                                             </scale-icon-service-settings>
                                         </scale-button>
                                         <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item [disabled]="!application?.action?.start">Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item [disabled]="!application?.action?.update">Aktualisieren
+                                            <scale-menu-flyout-item [disabled]="!application?.action?.start">{{
+                                                "details.start" | translate }}</scale-menu-flyout-item>
+                                            <scale-menu-flyout-item [disabled]="!application?.action?.update">{{
+                                                "details.maintenance" | translate }}
                                             </scale-menu-flyout-item>
-                                            <scale-menu-flyout-item [disabled]="!application?.action?.shutdown">Beenden</scale-menu-flyout-item>
+                                            <scale-menu-flyout-item [disabled]="!application?.action?.shutdown">{{
+                                                "details.shutdown" | translate }}</scale-menu-flyout-item>
                                         </scale-menu-flyout-list>
                                     </scale-menu-flyout>
                                 </td>

@@ -55,7 +55,11 @@
       "headline": "Netzwerk",
       "location": "Standort:"
     },
-    "applications": "Anwendungen",
+    "applications": {
+      "title": "Anwendungen",
+      "memory": "Arbeitsspeicher",
+      "btn": "Aktion"
+    },
     "cancel": "Schließen",
     "start": "Server starten",
     "shutdown": "Herunterfahren",
