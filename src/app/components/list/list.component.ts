@@ -8,6 +8,7 @@ import { serverDetails, vmGroups, vmServer } from 'src/app/models/vm-groups';
 })
 export class ListComponent implements OnInit {
 
+  maintenance: Boolean = false;
   selectedServer: vmServer;
 
   @Input() cards: vmServer[] = [];

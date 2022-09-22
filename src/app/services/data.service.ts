@@ -188,6 +188,7 @@ export class DataService {
     {
       id: 1,
       name: "Server 1",
+      status: true,
       category: 1,
       img: "macos",
       serverDetails:
@@ -199,19 +200,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: true,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 1,
       name: "Server 2",
+      status: false,
       category: 1,
       img: "windows",
       serverDetails:
@@ -223,31 +233,52 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: false,
+          btnStart: true
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         },
         {
-          name: "Spotify",
-          status: "Inactive",
+          name: "Webex",
+          status: "active",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: true,
+            start: false,
+            update: true,
+            shutdown: true
+          }
         },
         {
-          name: "Spotify",
-          status: "Inactive",
+          name: "Google Chrome",
+          status: "active",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: true,
+            start: false,
+            update: false,
+            shutdown: true
+          }
         }
       ]
     },
     {
       id: 1,
       name: "Server 3",
+      status: true,
       category: 1,
       img: "windows",
       serverDetails:
@@ -259,31 +290,52 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         },
         {
-          name: "Spotify",
-          status: "Inactive",
+          name: "Google Chrome",
+          status: "active",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: true,
+            start: false,
+            update: true,
+            shutdown: true
+          }
         },
         {
-          name: "Spotify",
+          name: "Webex",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 1,
       name: "Server 4",
+      status: true,
       category: 1,
       img: "windows",
       serverDetails:
@@ -295,19 +347,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
-          status: "Inactive",
+          status: "active",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: true,
+            start: false,
+            update: false,
+            shutdown: true
+          }
         }
       ]
     },
     {
       id: 2,
       name: "Server 5",
+      status: true,
       category: 1,
       img: "ubuntu",
       serverDetails:
@@ -319,19 +380,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
-          status: "Inactive",
+          status: "active",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: true,
+            start: false,
+            update: true,
+            shutdown: true
+          }
         }
       ]
     },
     {
       id: 3,
       name: "Server 6",
+      status: false,
       category: 1,
       img: "windows",
       serverDetails:
@@ -343,19 +413,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: false,
+          btnStart: true
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 4,
       name: "Server 7",
+      status: true,
       category: 1,
       img: "windows",
       serverDetails:
@@ -367,19 +446,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 5,
       name: "Server 8",
+      status: false,
       category: 2,
       img: "windows",
       serverDetails:
@@ -391,19 +479,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: false,
+          btnStart: true
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 6,
       name: "Server 9",
+      status: true,
       category: 2,
       img: "macos",
       serverDetails:
@@ -415,19 +512,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: true,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 7,
       name: "Server 10",
+      status: false,
       category: 2,
       img: "ubuntu",
       serverDetails:
@@ -439,19 +545,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: false,
+          btnStart: true
         },
       application: [
         {
           name: "Spotify",
-          status: "Inactive",
+          status: "active",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: true,
+            start: false,
+            update: false,
+            shutdown: true
+          }
         }
       ]
     },
     {
       id: 8,
       name: "Server 11",
+      status: true,
       category: 3,
       img: "macos",
       serverDetails:
@@ -463,19 +578,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: false,
+          btnStart: true
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 9,
       name: "Server 12",
+      status: true,
       category: 3,
       img: "windows",
       serverDetails:
@@ -487,19 +611,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: false,
+          btnStart: true
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 10,
       name: "Server 13",
+      status: true,
       category: 4,
       img: "macos",
       serverDetails:
@@ -511,19 +644,28 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         }
       ]
     },
     {
       id: 11,
       name: "Server 14",
+      status: false,
       category: 4,
       img: "macos",
       serverDetails:
@@ -535,19 +677,33 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: false,
+            start: true,
+            update: false,
+            shutdown: false
+          }
         },
         {
           name: "Spotify",
-          status: "Inactive",
+          status: "active",
           cpu: undefined,
-          memory: ""
+          memory: "",
+          action: {
+            status: true,
+            start: false,
+            update: true,
+            shutdown: true
+          }
         }
       ]
     },

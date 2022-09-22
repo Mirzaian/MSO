@@ -64,6 +64,7 @@
     "applications": "Applications",
     "cancel": "Cancel",
     "start": "Start server",
+    "shutdown": "Shutdown",
     "maintenance": "Maintenance"
   },
   "info": {

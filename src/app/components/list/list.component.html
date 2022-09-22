@@ -11,8 +11,15 @@
         <p>{{ card.name }}</p>
         <div class="mt-20">
             <h5>Status</h5>
-            <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
+            <scale-icon-alert-success *ngIf="card?.status; else warningIcon" fill="#00b367" size="24" selected
+                accessibility-title="Online">
             </scale-icon-alert-success>
+            <ng-template #warningIcon>
+                <scale-icon-alert-warning fill="#e82010" size="24"
+                    accessibility-title="Offline">
+                </scale-icon-alert-warning>
+            </ng-template>
+
         </div>
     </scale-card>
 </div>
@@ -21,8 +28,14 @@
     <div class="container">
         <h3 class="tv-Left">System
             <span class="pull-right">
-                <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
-                </scale-icon-alert-success>
+                <scale-icon-alert-success *ngIf="selectedServer?.status; else warningIcon" fill="#00b367" size="24" selected
+                accessibility-title="Online">
+            </scale-icon-alert-success>
+            <ng-template #warningIcon>
+                <scale-icon-alert-warning fill="#e82010" size="24"
+                    accessibility-title="Offline">
+                </scale-icon-alert-warning>
+            </ng-template>
             </span>
         </h3>
         <div class="row">
@@ -81,14 +94,14 @@
                                 <td>
                                     <scale-menu-flyout>
                                         <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
+                                            <scale-icon-service-settings accessibility-title="Action">
                                             </scale-icon-service-settings>
                                         </scale-button>
                                         <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren
+                                            <scale-menu-flyout-item [disabled]="!application?.action?.start">Starten</scale-menu-flyout-item>
+                                            <scale-menu-flyout-item [disabled]="!application?.action?.update">Aktualisieren
                                             </scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
+                                            <scale-menu-flyout-item [disabled]="!application?.action?.shutdown">Beenden</scale-menu-flyout-item>
                                         </scale-menu-flyout-list>
                                     </scale-menu-flyout>
                                 </td>
@@ -99,12 +112,17 @@
             </div>
         </div>
     </div>
-    <scale-button slot="action">
+    <scale-button slot="action" [disabled]="selectedServer?.serverDetails?.btnStart">
         {{ "details.maintenance" | translate }}
     </scale-button>
-    <scale-button slot="action">
+    <scale-button slot="action" *ngIf="selectedServer?.serverDetails?.btnStart; else shutdownBtn">
         {{ "details.start" | translate }}
     </scale-button>
+    <ng-template #shutdownBtn>
+        <scale-button slot="action">
+            {{ "details.shutdown" | translate }}
+        </scale-button>
+    </ng-template>
     <scale-button slot="action" variant="secondary" (click)="closeModal()">
         {{ "details.cancel" | translate }}
     </scale-button>

@@ -58,6 +58,7 @@
     "applications": "Anwendungen",
     "cancel": "Schließen",
     "start": "Server starten",
+    "shutdown": "Herunterfahren",
     "maintenance": "Wartung durchführen"
   },
   "info": {
