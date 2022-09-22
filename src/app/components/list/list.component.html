@@ -34,11 +34,12 @@
                 <p>{{ "details.system.hard-disk-storage" | translate }}</p>
             </div>
             <div class="box2">
-                <p>{{ selectedServer?.name}}</p>
-                <p>{{ selectedServer.serverDetails[0] }}</p>
-                <p>{{ selectedServer.serverDetails[1] }}</p>
-                <p>{{ selectedServer.serverDetails[2] }} GB</p>
-                <p>{{ selectedServer.serverDetails[3] }} GB</p>
+                <p>{{ selectedServer?.name }}</p>
+                <p>{{ selectedServer?.serverDetails?.os }}</p>
+                <p>{{ selectedServer?.serverDetails?.processor }}</p>
+                <p>{{ selectedServer?.serverDetails?.memory }}</p>
+                <p>{{ selectedServer?.serverDetails?.hdStorage }}</p>
+
             </div>
         </div>
         <scale-divider></scale-divider>
@@ -50,9 +51,9 @@
                 <p>{{ "details.network.location" | translate }}</p>
             </div>
             <div class="box2">
-                <p>{{ selectedServer.serverDetails[4] }}</p>
-                <p>{{ selectedServer.serverDetails[5] }}</p>
-                <p>{{ selectedServer.serverDetails[6] }}</p>
+                <p>{{ selectedServer?.serverDetails?.ipv4 }}</p>
+                <p>{{ selectedServer?.serverDetails?.ipv6 }}</p>
+                <p>{{ selectedServer?.serverDetails?.location }}</p>
             </div>
         </div>
         <scale-divider></scale-divider>
@@ -72,11 +73,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>{{ selectedServer.application[0] }}</td>
-                                <td>{{ selectedServer.application[1] }}</td>
-                                <td>{{ selectedServer.serverDetails[2] }}</td>
-                                <td>{{ selectedServer.serverDetails[3] }} GB</td>
+                            <tr *ngFor="let application of selectedServer?.application">
+                                <td>{{ application?.name}}</td>
+                                <td>{{ application?.status }}</td>
+                                <td>{{ application?.cpu ?? "-" }}</td>
+                                <td>{{ application?.memory ? application?.memory + "GB" : "-" }} </td>
                                 <td>
                                     <scale-menu-flyout>
                                         <scale-button slot="trigger" variant="secondary" icon-only>

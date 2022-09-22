@@ -1,6 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, NgModule, NO_ERRORS_SCHEMA, OnInit, Output } from '@angular/core';
-import { json } from 'd3';
-import { vmGroups, vmServer } from 'src/app/models/vm-groups';
+import { serverDetails, vmGroups, vmServer } from 'src/app/models/vm-groups';
 
 @Component({
   selector: 'app-list',

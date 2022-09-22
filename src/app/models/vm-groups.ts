@@ -10,7 +10,7 @@ export interface vmServer {
     name: string;
     category: number;
     img: string;
-    serverDetails: Array<serverDetails>;
+    serverDetails: serverDetails;
     application: Array<serverApplications>;
 }
 
@@ -27,7 +27,7 @@ export interface serverDetails {
 export interface serverApplications {
     name: string;
     status: string;
-    cpu: string;
+    cpu: string|undefined;
     memory: string;
 }
 

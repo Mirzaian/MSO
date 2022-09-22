@@ -190,7 +190,7 @@ export class DataService {
       name: "Server 1",
       category: 1,
       img: "macos",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -199,14 +199,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -215,7 +214,7 @@ export class DataService {
       name: "Server 2",
       category: 1,
       img: "windows",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -224,14 +223,25 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
+        },
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: undefined,
+          memory: ""
+        },
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -240,7 +250,7 @@ export class DataService {
       name: "Server 3",
       category: 1,
       img: "windows",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -249,14 +259,25 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
+        },
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: undefined,
+          memory: ""
+        },
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -265,7 +286,7 @@ export class DataService {
       name: "Server 4",
       category: 1,
       img: "windows",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -274,14 +295,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -290,7 +310,7 @@ export class DataService {
       name: "Server 5",
       category: 1,
       img: "ubuntu",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -299,14 +319,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -315,7 +334,7 @@ export class DataService {
       name: "Server 6",
       category: 1,
       img: "windows",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -324,14 +343,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -340,7 +358,7 @@ export class DataService {
       name: "Server 7",
       category: 1,
       img: "windows",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -349,14 +367,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -365,7 +382,7 @@ export class DataService {
       name: "Server 8",
       category: 2,
       img: "windows",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -374,14 +391,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -390,7 +406,7 @@ export class DataService {
       name: "Server 9",
       category: 2,
       img: "macos",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -399,14 +415,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -415,7 +430,7 @@ export class DataService {
       name: "Server 10",
       category: 2,
       img: "ubuntu",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -424,14 +439,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -440,7 +454,7 @@ export class DataService {
       name: "Server 11",
       category: 3,
       img: "macos",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -449,14 +463,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -465,7 +478,7 @@ export class DataService {
       name: "Server 12",
       category: 3,
       img: "windows",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -474,14 +487,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -490,7 +502,7 @@ export class DataService {
       name: "Server 13",
       category: 4,
       img: "macos",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -499,14 +511,13 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
@@ -515,7 +526,7 @@ export class DataService {
       name: "Server 14",
       category: 4,
       img: "macos",
-      serverDetails: [
+      serverDetails:
         {
           os: "macos",
           processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
@@ -524,14 +535,19 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-        }
-      ],
+        },
       application: [
         {
           name: "Spotify",
           status: "Inactive",
-          cpu: "-",
-          memory: "-"
+          cpu: undefined,
+          memory: ""
+        },
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: undefined,
+          memory: ""
         }
       ]
     },
