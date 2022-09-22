@@ -1,13 +1,13 @@
 <!-- Card view -->
 <div class="ib text-center p-5 animate__animated animate__backInRight" *ngFor="let card of cards">
     <scale-card (click)="openModal(card)">
-        <ng-container [ngSwitch]="card.os">
+        <ng-container [ngSwitch]="card.img">
             <img alt="Windows" *ngSwitchCase="'windows'" src="assets/images/os/windows.png">
             <img alt="Ubuntu" *ngSwitchCase="'ubuntu'" src="assets/images/os/ubuntu.png">
             <img alt="macOS" *ngSwitchCase="'macos'" src="assets/images/os/macos.png">
             <img alt="Debian" *ngSwitchCase="'debian'" src="assets/images/os/debian.png">
         </ng-container>
-        <h4>Servername:</h4>
+        <h4 class="mt-1">Servername:</h4>
         <p>{{ card.name }}</p>
         <div class="mt-20">
             <h5>Status</h5>
@@ -17,8 +17,8 @@
     </scale-card>
 </div>
 <!-- Modal view -->
-<scale-modal heading="{{ 'details.headline' | translate }}">
-    <div class="container" id="modal" *ngFor="let detail of details">
+<scale-modal id="modal" heading="{{ 'details.headline' | translate }}">
+    <div class="container">
         <h3 class="tv-Left">System
             <span class="pull-right">
                 <scale-icon-alert-success fill="#00b367" size="24" selected accessibility-title="Online">
@@ -34,11 +34,11 @@
                 <p>{{ "details.system.hard-disk-storage" | translate }}</p>
             </div>
             <div class="box2">
-                <p>{{ detail.name}}</p>
-                <p>{{ detail.os }}</p>
-                <p>{{ detail.processor }}</p>
-                <p>{{ detail.memory }} GB</p>
-                <p>{{ detail.hdStorage }} GB</p>
+                <p>{{ selectedServer?.name}}</p>
+                <p>{{ selectedServer.serverDetails[0] }}</p>
+                <p>{{ selectedServer.serverDetails[1] }}</p>
+                <p>{{ selectedServer.serverDetails[2] }} GB</p>
+                <p>{{ selectedServer.serverDetails[3] }} GB</p>
             </div>
         </div>
         <scale-divider></scale-divider>
@@ -50,9 +50,9 @@
                 <p>{{ "details.network.location" | translate }}</p>
             </div>
             <div class="box2">
-                <p>{{ detail.ipv4 }}</p>
-                <p>{{ detail.ipv6 }}</p>
-                <p>{{ detail.location }}</p>
+                <p>{{ selectedServer.serverDetails[4] }}</p>
+                <p>{{ selectedServer.serverDetails[5] }}</p>
+                <p>{{ selectedServer.serverDetails[6] }}</p>
             </div>
         </div>
         <scale-divider></scale-divider>
@@ -73,10 +73,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Spotify</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td>{{ selectedServer.application[0] }}</td>
+                                <td>{{ selectedServer.application[1] }}</td>
+                                <td>{{ selectedServer.serverDetails[2] }}</td>
+                                <td>{{ selectedServer.serverDetails[3] }} GB</td>
                                 <td>
                                     <scale-menu-flyout>
                                         <scale-button slot="trigger" variant="secondary" icon-only>
@@ -85,140 +85,8 @@
                                         </scale-button>
                                         <scale-menu-flyout-list>
                                             <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
-                                        </scale-menu-flyout-list>
-                                    </scale-menu-flyout>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Teamspeak</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>
-                                    <scale-menu-flyout>
-                                        <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
-                                            </scale-icon-service-settings>
-                                        </scale-button>
-                                        <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
-                                        </scale-menu-flyout-list>
-                                    </scale-menu-flyout>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Outlook</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>
-                                    <scale-menu-flyout>
-                                        <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
-                                            </scale-icon-service-settings>
-                                        </scale-button>
-                                        <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
-                                        </scale-menu-flyout-list>
-                                    </scale-menu-flyout>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Word</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>
-                                    <scale-menu-flyout>
-                                        <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
-                                            </scale-icon-service-settings>
-                                        </scale-button>
-                                        <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
-                                        </scale-menu-flyout-list>
-                                    </scale-menu-flyout>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Powerpoint</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>
-                                    <scale-menu-flyout>
-                                        <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
-                                            </scale-icon-service-settings>
-                                        </scale-button>
-                                        <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
-                                        </scale-menu-flyout-list>
-                                    </scale-menu-flyout>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Visual Studio Code</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>
-                                    <scale-menu-flyout>
-                                        <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
-                                            </scale-icon-service-settings>
-                                        </scale-button>
-                                        <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
-                                        </scale-menu-flyout-list>
-                                    </scale-menu-flyout>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Google Chrome</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>
-                                    <scale-menu-flyout>
-                                        <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
-                                            </scale-icon-service-settings>
-                                        </scale-button>
-                                        <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
-                                        </scale-menu-flyout-list>
-                                    </scale-menu-flyout>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Firefox</td>
-                                <td>Inactive</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>
-                                    <scale-menu-flyout>
-                                        <scale-button slot="trigger" variant="secondary" icon-only>
-                                            <scale-icon-service-settings accessibility-title="Open menu">
-                                            </scale-icon-service-settings>
-                                        </scale-button>
-                                        <scale-menu-flyout-list>
-                                            <scale-menu-flyout-item>Starten</scale-menu-flyout-item>
-                                            <scale-menu-flyout-item>Aktualisieren</scale-menu-flyout-item>
+                                            <scale-menu-flyout-item>Aktualisieren
+                                            </scale-menu-flyout-item>
                                             <scale-menu-flyout-item>Beenden</scale-menu-flyout-item>
                                         </scale-menu-flyout-list>
                                     </scale-menu-flyout>

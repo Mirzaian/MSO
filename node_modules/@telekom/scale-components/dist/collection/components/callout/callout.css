@@ -1,0 +1,95 @@
+:host {
+  --inner-width-small: var(--telekom-spacing-unit-x20);
+  --inner-height-small: var(--telekom-spacing-unit-x20);
+  --inner-width-large: 126.5px;
+  --inner-height-large: 96px;
+  --width-small: 120px;
+  --height-small: 120px;
+  --height-large: 160px;
+  --width-large: 160px;
+  /* FIXME variables shouldn't have color names */
+  --color-blue: var(--telekom-color-functional-informational-standard);
+  /* FIXME variables are used sometimes as background and sometimes as font color */
+  --color-white: var(--telekom-color-background-surface);
+  --color-black: var(--telekom-color-text-and-icon-functional-black);
+  --color-primary: var(--telekom-color-primary-standard);
+  --font-family: var(--telekom-typography-font-family-sans);
+  /* FIXME is this calc necessary? */
+  --font-size: calc(var(--telekom-typography-font-size-callout) * 3);
+  --font-size-prefix: var(--telekom-typography-font-size-callout);
+}
+
+.callout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: var(--color-primary);
+  font-family: var(--font-family);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.callout.callout--color-primary {
+  background: var(--color-primary);
+}
+.callout.callout--color-white {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+.callout.callout--color-blue {
+  background: var(--color-blue);
+  color: var(--telekom-color-text-and-icon-white-standard);
+}
+.callout.callout--color-black {
+  background: var(--telekom-color-ui-additional-extra-strong);
+  color: var(--telekom-color-text-and-icon-inverted-standard);
+}
+
+.callout.callout--size-large {
+  width: var(--width-large);
+  height: var(--height-large);
+}
+
+.callout.callout--size-small {
+  width: var(--width-small);
+  height: var(--height-small);
+}
+
+.callout.callout--size-large .callout__inner {
+  width: var(--inner-width-large);
+  height: var(--inner-height-large);
+}
+
+.callout.callout--size-small .callout__inner {
+  width: var(--inner-width-small);
+  height: var(--inner-height-small);
+}
+
+.callout__inner {
+  transform: rotateZ(var(--rotation));
+  overflow: hidden;
+}
+
+.callout__prefix {
+  font-size: var(--font-size-prefix);
+  font-weight: 400;
+}
+
+.callout__text {
+  font-size: var(--font-size);
+  font-weight: 700;
+}
+
+.callout__sup {
+  font-size: 30px;
+  cursor: help;
+}
+
+.callout.callout--size-large.callout--asterisk .callout__prefix {
+  margin-bottom: 10px;
+}
+
+.callout.callout--size-small .callout__prefix {
+  margin-bottom: 10px;
+}

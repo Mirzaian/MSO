@@ -1,0 +1,176 @@
+/**
+ * @license
+ * Scale https://github.com/telekom/scale
+ *
+ * Copyright (c) 2021 Egor Kirpichev and contributors, Deutsche Telekom AG
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+:host {
+  --background: var(--telekom-color-ui-additional-extra-strong);
+  --color: var(--telekom-color-text-and-icon-inverted-standard);
+  --font-size: var(--telekom-typography-font-size-body);
+  --line-height: var(--telekom-typography-line-spacing-standard);
+  --font-weight: var(--telekom-typography-font-weight-bold);
+  --radius: var(--telekom-radius-small);
+  --box-shadow-focus: 0 0 0 var(--telekom-line-weight-highlight)
+    var(--telekom-color-functional-focus);
+
+  --icon-color: var(--color);
+  --icon-color-hover: var(--color);
+  --color-secondary: var(--telekom-color-text-and-icon-white-standard);
+  --background-secondary: var(--telekom-color-additional-teal-600);
+  --background-secondary-hover: var(--telekom-color-ui-ghost-hovered);
+  --background-secondary-active: var(--telekom-color-ui-ghost-pressed);
+
+  --background-disabled: var(--telekom-color-ui-solid-disabled);
+  --color-disabled: var(--telekom-color-text-and-icon-disabled);
+
+  --spacing-left-dismissable: var(--telekom-spacing-unit-x05);
+
+  --border-button-dismissable-focus: 1px solid
+    var(--telekom-color-ui-outlined-border-standard);
+  --box-shadow-button-dismissable-focus: var(--box-shadow-focus);
+  --background-button-dismissable-hover: var(
+    --telekom-color-ui-ghost-hovered-inverted
+  );
+  --background-button-dismissable-active: var(
+    --telekom-color-ui-ghost-pressed-inverted
+  );
+  --height-button-dismissable-small: 20px;
+
+  --spacing-small: 0 var(--telekom-spacing-unit-x2);
+  --font-size-small: var(--telekom-typography-font-size-small);
+  --line-height-small: var(--telekom-typography-line-spacing-loose);
+}
+
+.tag {
+  border: 1px solid transparent;
+  display: inline-flex;
+  outline: none;
+  padding: 0 10px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: var(--telekom-radius-small);
+  vertical-align: baseline;
+  justify-content: center;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  background: var(--background);
+  color: var(--color);
+  cursor: default;
+}
+
+.tag--variant-secondary {
+  background: var(--background-secondary);
+  color: var(--color-secondary);
+}
+
+.tag scale-icon-action-close {
+  color: var(--icon-color);
+  transition: all 0.15s ease-in-out;
+}
+
+.tag:not(.tag--disabled) scale-icon-action-close:hover {
+  color: var(--icon-color-hover);
+}
+.tag--variant-secondary scale-icon-action-close,
+.tag--variant-secondary:not(.tag--disabled) scale-icon-action-close:hover {
+  color: var(--color-secondary);
+}
+
+.tag--dismissable {
+  padding-right: 0;
+}
+.tag--dismissable button {
+  border: none;
+  cursor: pointer;
+  height: 24px;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  background: transparent;
+  margin-left: var(--spacing-left-dismissable);
+  border-radius: var(--radius);
+}
+
+.tag--dismissable button:focus {
+  border: var(--border-button-dismissable-focus);
+  background: var(--background-button-dismissable-focus);
+  box-shadow: var(--box-shadow-button-dismissable-focus);
+}
+.tag--dismissable button:hover {
+  background: var(--background-button-dismissable-hover);
+}
+.tag--dismissable button:active {
+  background: var(--background-button-dismissable-active);
+}
+.tag--dismissable button:focus scale-icon-action-close {
+  top: -1px;
+  position: relative;
+}
+.tag--size-small {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.tag--size-small.tag--dismissable {
+  padding-right: 0;
+}
+.tag--size-small.tag--dismissable button {
+  height: var(--height-button-dismissable-small);
+}
+
+.tag--variant-secondary.tag--dismissable {
+  background: var(--background-secondary);
+  color: var(--color-secondary);
+}
+
+.tag--variant-secondary.tag--disabled {
+  opacity: 0.5;
+}
+.tag--link {
+  text-decoration: none;
+}
+.tag--link:focus {
+  border: 1px solid white;
+  box-shadow: var(--box-shadow-focus);
+}
+.tag--link.tag--variant-secondary {
+  background: var(--background-secondary);
+}
+.tag--link.tag--variant-secondary:hover {
+  background: var(--background-secondary);
+}
+
+.tag--variant-secondary.tag--dismissable button:hover {
+  background: var(--background-secondary-hover);
+}
+.tag--variant-secondary.tag--dismissable button:active {
+  background: var(--background-secondary-hover);
+}
+.tag--link.tag--variant-secondary:focus {
+  border: 1px solid white;
+}
+.tag--disabled {
+  background: var(--background-disabled);
+  color: var(--color-disabled);
+  cursor: not-allowed;
+  color: var(--color-disabled);
+}
+.tag--disabled scale-icon-action-close {
+  color: var(--color-disabled);
+}
+.tag--disabled button {
+  cursor: not-allowed;
+}
+.tag--disabled button:hover {
+  cursor: not-allowed;
+  background: var(--background-disabled);
+}

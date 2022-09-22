@@ -187,171 +187,353 @@ export class DataService {
   private vmServer: vmServer[] = [
     {
       id: 1,
-      name: "CATEGORY 1",
+      name: "Server 1",
       category: 1,
-      os: "macos",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "macos",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 1,
-      name: "CATEGORY 1",
+      name: "Server 2",
       category: 1,
-      os: "windows",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "windows",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 1,
-      name: "CATEGORY 1",
+      name: "Server 3",
       category: 1,
-      os: "windows",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "windows",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 1,
-      name: "CATEGORY 1",
+      name: "Server 4",
       category: 1,
-      os: "windows",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "windows",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 2,
-      name: "CATEGORY 1",
+      name: "Server 5",
       category: 1,
-      os: "ubuntu",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "ubuntu",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 3,
-      name: "CATEGORY 1",
+      name: "Server 6",
       category: 1,
-      os: "windows",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "windows",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 4,
-      name: "CATEGORY 1",
+      name: "Server 7",
       category: 1,
-      os: "windows",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "windows",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 5,
-      name: "CATEGORY 2",
+      name: "Server 8",
       category: 2,
-      os: "windows",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "windows",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 6,
-      name: "CATEGORY 2",
+      name: "Server 9",
       category: 2,
-      os: "macos",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "macos",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 7,
-      name: "CATEGORY 2",
+      name: "Server 10",
       category: 2,
-      os: "ubuntu",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "ubuntu",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 8,
-      name: "CATEGORY 3",
+      name: "Server 11",
       category: 3,
-      os: "macos",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "macos",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 9,
-      name: "CATEGORY 3",
+      name: "Server 12",
       category: 3,
-      os: "windows",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "windows",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 10,
-      name: "he42123 D3 Server 1",
+      name: "Server 13",
       category: 4,
-      os: "macos",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "macos",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
     {
       id: 11,
-      name: "he42123 D3 Server 2",
+      name: "Server 14",
       category: 4,
-      os: "macos",
-      processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
-      memory: 30,
-      hdStorage: 500,
-      ipv4: "79.208.243.152",
-      ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
-      location: "Deutschland"
+      img: "macos",
+      serverDetails: [
+        {
+          os: "macos",
+          processor: "Intel®Xenon® Gold 6240R CPU @ 2x2.40GHz",
+          memory: 30,
+          hdStorage: 500,
+          ipv4: "79.208.243.152",
+          ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
+          location: "Deutschland",
+        }
+      ],
+      application: [
+        {
+          name: "Spotify",
+          status: "Inactive",
+          cpu: "-",
+          memory: "-"
+        }
+      ]
     },
   ]
 
