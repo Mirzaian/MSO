@@ -23,7 +23,7 @@ export class FooterComponent implements OnInit {
     translateService.onLangChange.subscribe((languageSettings) => {
       this.currentLanguage = languageSettings.lang;
       this.loadTranslations();
-      this.cdf.markForCheck();
+      this.cdf.detectChanges();
     })
   }
 
@@ -35,6 +35,8 @@ export class FooterComponent implements OnInit {
     this.footerNavigation[1].name = this.translateService.instant("footer.terms");
     this.footerNavigation[2].name = this.translateService.instant("footer.lg");
     this.footerNavigation[3].name = this.translateService.instant("footer.dp");
+    console.log(this.footerNavigation);
+    this.footerNavigation = Object.assign([], this.footerNavigation)
   }
 }
 
