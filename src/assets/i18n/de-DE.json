@@ -58,7 +58,10 @@
     "applications": {
       "title": "Anwendungen",
       "memory": "Arbeitsspeicher",
-      "btn": "Aktion"
+      "btn": "Aktion",
+      "start": "Starten",
+      "close": "Beenden",
+      "update": "Aktualisieren"
     },
     "cancel": "Schließen",
     "start": "Server starten",

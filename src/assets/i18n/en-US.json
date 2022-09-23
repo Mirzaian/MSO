@@ -58,7 +58,10 @@
     "applications": {
       "title": "Applications",
       "memory": "RAM",
-      "btn": "Action"
+      "btn": "Action",
+      "start": "Start",
+      "close": "Close",
+      "update": "Update"
     },
     "cancel": "Cancel",
     "start": "Start server",

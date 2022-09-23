@@ -188,7 +188,7 @@ export class DataService {
     {
       id: 1,
       name: "Server 1",
-      status: true,
+      status: false,
       category: 1,
       img: "macos",
       serverDetails:
@@ -200,8 +200,8 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-          btnMaintenance: true,
-          btnStart: false
+          btnMaintenance: false,
+          btnStart: true
         },
       application: [
         {
@@ -221,7 +221,7 @@ export class DataService {
     {
       id: 1,
       name: "Server 2",
-      status: false,
+      status: true,
       category: 1,
       img: "windows",
       serverDetails:
@@ -233,8 +233,8 @@ export class DataService {
           ipv4: "79.208.243.152",
           ipv6: "2003:E6:170F:8D13:F109:A472:39D3:9C2A",
           location: "Deutschland",
-          btnMaintenance: false,
-          btnStart: true
+          btnMaintenance: true,
+          btnStart: false
         },
       application: [
         {
