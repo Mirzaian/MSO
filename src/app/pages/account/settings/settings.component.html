@@ -1,38 +1,33 @@
-<div class="wrapper">
-    <h1 class="tv-Center mb-30">
-        {{ "settings.headline" | translate }}
-    </h1>
-    <scale-divider></scale-divider>
-    <div class="container tv-Center mt-40 mb-30">
-        <h3>{{ 'settings.headline-2' | translate }}</h3>
-        <span>{{ 'settings.sub-title' | translate }}</span>
+<div class="container">
+  <h1 class="mb-3">
+    {{ "settings.headline" | translate }}
+  </h1>
+  <scale-divider></scale-divider>
+  <div class="text-center mt-4">
+    <h3>{{ "settings.headline-2" | translate }}</h3>
+    <span>{{ "settings.sub-title" | translate }}</span>
+  </div>
+  <div class="row justify-content-evenly py-5">
+    <div class="col-4">
+      <scale-text-field
+        label="{{ 'settings.input-old' | translate }}"
+        type="password"
+        required>
+      </scale-text-field>
+      <scale-text-field
+        label="{{ 'settings.input-new' | translate }}"
+        type="password"
+        required>
+      </scale-text-field>
+      <scale-text-field
+        label="{{ 'settings.input-confirm' | translate }}"
+        type="password"
+        required>
+      </scale-text-field>
+      <div class="text-center mt-4">
+        <scale-button>{{ "settings.save" | translate }}</scale-button>
+      </div>
     </div>
-    <div class="row">
-        <div class="column left">
-        </div>
-        <div class="column middle">
-            <div class="mb-10 mobile">
-                <div class="tfield">
-                    <scale-text-field label="{{ 'settings.input-old' | translate }}" type="password" required>
-                    </scale-text-field>
-                </div>
-            </div>
-            <div class="mb-10 mobile">
-                <div class="tfield">
-                    <scale-text-field label="{{ 'settings.input-new' | translate }}" type="password" required>
-                    </scale-text-field>
-                </div>
-            </div>
-            <div class="tfield">
-                <scale-text-field label="{{ 'settings.input-confirm' | translate }}" type="password" required>
-                </scale-text-field>
-            </div>
-            <div class="mt-40 tv-Center">
-                <scale-button>{{ 'settings.save' | translate }}</scale-button>
-            </div>
-        </div>
-        <div class="column right"></div>
-    </div>
-    <div style="height: 100px; padding: 48px 0;">
-    </div>
+  </div>
+  <div style="height: 100px; padding: 48px 0"></div>
 </div>

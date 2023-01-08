@@ -9,6 +9,7 @@ export class SignedGuard implements CanActivate {
 
   constructor(private service: UserService, private router: Router) { }
 
+  // Checking the isLoggedIn status in the UserService 
   canActivate() {
     if (this.service.isLoggedIn()) {
       this.router.navigate(['/dashboard']);

@@ -1,22 +1,26 @@
 <!-- Header -->
-<div class="content">
-  <section>
+<div class="container">
+  <section class="mt-4 mb-3">
     <h1 class="subtitle animate__animated animate__backInDown">
       {{ 'login.subtitle' | translate }}<br>
       <span class="title">{{ 'login.title' | translate }}</span>
     </h1>
-    <p class="tv-info mt-40 mb-30">
+    <p class="tv-info">
       {{ 'login.tv-info' | translate }}
     </p>
   </section>
   <!-- Content -->
   <section class="login-form">
-    <scale-notification-message class="mb-30 db tv-Center" opened> {{ 'login.notification-message' | translate }}
+    <scale-notification-message opened> {{ 'login.notification-message' | translate }}
     </scale-notification-message>
-    <scale-input class="mb-30 db" label="{{ 'login.label-mail' | translate }}"
+    <scale-input label="{{ 'login.label-mail' | translate }}"
       placeholder="Max.mustermann@telekom.de" type="email" required="true" [(ngModel)]="email"></scale-input>
-    <scale-input class="mb-30 db" label="{{ 'login.label-password' | translate }}" type="password" required="true"
+    <scale-input label="{{ 'login.label-password' | translate }}" type="password" required="true"
       [(ngModel)]="password"></scale-input>
     <scale-button class="pull-right" id="submit" (click)="login()">{{ 'login.submit' | translate }}</scale-button>
   </section>
+  <!-- Notification  -->
+  <scale-notification-toast variant="error" *ngIf="notification" opened>
+    <p slot="header">{{ 'login.notification-error' | translate }}</p>
+  </scale-notification-toast>
 </div>

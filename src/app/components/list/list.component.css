@@ -1,46 +1,5 @@
-ng-container {
-    margin: auto;
-    display: flex;
-}
-
 img {
     width: 100px;
     height: auto;
     max-width: 100%;
 }
-
-.h3 {
-    text-align: left !important;
-}
-
-.h4 {
-    text-align: left !important;
-}
-
-.box1 {
-    display: block;
-    text-align: left;
-    max-width: 170px;
-    line-height: 0px;
-}
-
-.box2 {
-    text-align: left;
-    max-width: 400px;
-    line-height: 0px;
-    display: block;
-}
-
-.box3 {
-    text-align: left;
-    width: 100%;
-    line-height: 0px;
-}
-
-p {
-    padding-top: 15px;
-    font-weight: var(--telekom-typography-font-weight-thin);
-}
-
-/* If the screen size is 600px wide or less, hide the element */
-@media only screen and (max-width: 600px) {}

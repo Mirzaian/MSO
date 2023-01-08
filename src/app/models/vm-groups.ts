@@ -1,10 +1,13 @@
 
+// Interface for chapters view with developer teams
 export interface vmGroups {
     id: number;
     name: string;
     category: number;
     children: Array<vmGroups>
 }
+
+// Interface for the modal view of the servers
 export interface vmServer {
     id: number;
     status: boolean;
@@ -15,6 +18,8 @@ export interface vmServer {
     application: Array<serverApplications>;
 }
 
+// Interface furhter of 'vmServer' with the system and network infos
+// Also added the maintance and serverstart type
 export interface serverDetails {
     os: string;
     processor: string;
@@ -28,6 +33,8 @@ export interface serverDetails {
 
 }
 
+// Interface further of 'vmServer' with the attributes of serverApplications
+//Also added actions for applications
 export interface serverApplications {
     name: string;
     status: string;
@@ -39,12 +46,4 @@ export interface serverApplications {
         update: boolean;
         shutdown: boolean;
     }
-}
-
-export interface vmEntry {
-    id: number;
-    name: string;
-    status: string;
-    applications: string;
-    uptime: number;
 }

@@ -29,7 +29,8 @@
     "label-mail": "Benutzername",
     "label-password": "Passwort",
     "submit": "Anmelden",
-    "notification-message": "Hinweis: Login mit deinem Domänen Passwort (EMEA1/EMEA2) oder als Externer mit ZAM Passwort"
+    "notification-message": "Hinweis: Login mit deinem Domänen Passwort (EMEA1/EMEA2) oder als Externer mit ZAM Passwort",
+    "notification-error": "Fehlerhafte Eingabe"
   },
   "warning": {
     "h1_headline": "Leider konnten wir die \n Seite nicht finden.",
@@ -38,10 +39,10 @@
     "button_title": "Zurück"
   },
   "dashboard": {
-    "headline": "Übersicht"
+    "headline": "Gesamtübersicht"
   },
   "server": {
-    "title": "Server"
+    "title": "Server Übersicht"
   },
   "details": {
     "headline": "Server Informationen",

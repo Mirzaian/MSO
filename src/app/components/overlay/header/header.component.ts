@@ -40,7 +40,8 @@ export class HeaderComponent implements OnInit {
     { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['/']); }, variant: 'secondary' },
   ];
 
-  constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef, private translateService: TranslateService, private userService: UserService) {
+  constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef,
+    private translateService: TranslateService, private userService: UserService) {
     this.translateService.getTranslation(this.currentLanguage).subscribe(() => { this.loadTranslations() })
     translateService.onLangChange.subscribe((languageSettings) => {
       this.currentLanguage = languageSettings.lang;

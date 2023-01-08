@@ -1,18 +1,18 @@
 <div class="container">
-    <h1 class="mb-30">
+    <h1 class="mb-3">
         {{ "dashboard.headline" | translate }}
     </h1>
     <scale-divider></scale-divider>
-    <div class="row mt-40 animate__animated animate__backInDown">
+    <div class="row mt-4 animate__animated animate__backInDown">
         <div class="col-md-3 p-2" *ngFor="let card of cards">
             <scale-card>
-                <h3 class="mb-10">{{ card.name }}</h3>
+                <h3 class="mb-1">{{ card.name }}</h3>
                 <h1>{{ card.totalServer }}<span class="lead"> {{ card?.format }}</span>
                 </h1>
             </scale-card>
         </div>
     </div>
-    <div class="row mt-40 animate__animated animate__backInUp">
+    <div class="row mt-4 animate__animated animate__backInUp">
         <div class="col-md-8 p-2">
             <scale-card>
                 <h3>Server Standorte</h3>
@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-4 p-2">
             <scale-card>
-                <h3 class="mb-30">Serverliste</h3>
+                <h3 class="mb-3">Serverliste</h3>
                 <scale-table class="tv-Center" size="default">
                     <table>
                         <thead>

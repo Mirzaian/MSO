@@ -1,27 +1,28 @@
-<div class="content">
-    <h1 class="tv-Center mb-30">
-        {{ "contact.headline" | translate }}
-    </h1>
-    <div class="mt-40">
-        <h3 class="sub-title">{{ "contact.sub-title" | translate }}</h3>
-    </div>
+<div class="container">
+  <section class="mt-4 mb-3">
+    <h1>{{ "contact.headline" | translate }}</h1>
     <scale-divider></scale-divider>
+    <div class="text-center mt-4">
+      <h3>{{ "contact.headline-2" | translate }}</h3>
+      <span>{{ "contact.sub-title" | translate }}</span>
+  </div>
+</section>
     <div class="contact-form">
-        <scale-notification-message class="mb-30 db tv-Center" opened> {{ 'contact.notification-message' | translate }}
+        <scale-notification-message class="mb-3 text-center" opened> {{ 'contact.notification-message' | translate }}
         </scale-notification-message>
-        <scale-input class="mb-30 db" label="{{ 'contact.label-firstname' | translate }}"
+        <scale-input class="mb-3" label="{{ 'contact.label-firstname' | translate }}"
             placeholder="Max.mustermann@telekom.de" type="email" required="true"></scale-input>
-        <scale-input class="mb-30 db" label="{{ 'contact.label-lastname' | translate }}" type="password"
+        <scale-input class="mb-3" label="{{ 'contact.label-lastname' | translate }}" type="password"
             required="true"></scale-input>
 
-            <scale-dropdown class="mb-30 db" label="select">
+            <scale-dropdown class="mb-3" label="select">
                 <option value="1">item 1</option>
                 <option value="2" selected>item 2</option>
                 <option value="3">item 3</option>
               </scale-dropdown>
-        <scale-textarea class="mb-30 db" label="{{ 'contact.label-textarea' | translate }}" type="password"
+        <scale-textarea class="mb-3" label="{{ 'contact.label-textarea' | translate }}" type="password"
             required="true"></scale-textarea>
-        <scale-button class="pull-right" id="submit">{{ 'contact.btn-send' | translate }}</scale-button>
+        <scale-button class="float-end" id="submit">{{ 'contact.btn-send' | translate }}</scale-button>
         <div style="height: 100px; padding: 48px 0;">
         </div>
     </div>

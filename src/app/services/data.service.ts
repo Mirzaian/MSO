@@ -10,7 +10,7 @@ export class DataService {
   private vmGroup: vmGroups[] = [
     {
       id: 1,
-      name: "Administration",
+      name: "Chapter 1",
       category: 55,
       children: [
         {
@@ -23,7 +23,7 @@ export class DataService {
     },
     {
       id: 2,
-      name: "Ausbildung",
+      name: "Chapter 2",
       category: 33,
       children: [
         {
@@ -36,13 +36,13 @@ export class DataService {
     },
     {
       id: 3,
-      name: "Backup",
+      name: "Chapter 3",
       category: 3,
       children: []
     },
     {
       id: 4,
-      name: "Central Servers",
+      name: "Chapter 4",
       category: 66,
       children: [
         {
@@ -61,7 +61,7 @@ export class DataService {
     },
     {
       id: 5,
-      name: "Citrix",
+      name: "Chapter 5",
       category: 87,
       children: [
         {
@@ -104,13 +104,13 @@ export class DataService {
     },
     {
       id: 6,
-      name: "IBM-KM-Tool",
+      name: "Chapter 6",
       category: 99,
       children: []
     },
     {
       id: 7,
-      name: "IQS PUB",
+      name: "Chapter 7",
       category: 87,
       children: [
         {
@@ -171,7 +171,7 @@ export class DataService {
     },
     {
       id: 8,
-      name: "Labor",
+      name: "Chapter 8",
       category: 98,
       children: [
         {

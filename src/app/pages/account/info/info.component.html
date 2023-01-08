@@ -1,21 +1,20 @@
-<div class="content">
-    <h1 class="tv-Center mb-30">
-        {{ "info.headline" | translate }}
-    </h1>
-    <scale-divider></scale-divider>
-    <div class="tv-Center mt-40">
-        <h3>{{ "info.sub-title" | translate }}</h3>
+<div class="container">
+  <h1 class="mb-3">
+    {{ "info.headline" | translate }}
+  </h1>
+  <scale-divider></scale-divider>
+  <div class="mt-4">
+    <h3>{{ "info.sub-title" | translate }}</h3>
+  </div>
+  <div class="row justify-content-evenly py-5">
+    <div class="col-4">
+      <h5 class="text-end">Name:</h5>
+      <h5 class="text-end">{{ "info.email-address" | translate }}</h5>
     </div>
-    <div class="row">
-        <div class="column right">
-            <h3>Name:</h3>
-            <h3>{{ "info.email-address" | translate }}</h3>
-        </div>
-        <div class="column left">
-            <h3>Kevin Mirzaian</h3>
-            <h3>k.mirzaian@telekom.de</h3>
-        </div>
+    <div class="col-4">
+      <h5 class="text-start">Kevin Mirzaian</h5>
+      <h5 class="text-start">k.mirzaian@telekom.de</h5>
     </div>
-    <div style="height: 100px; padding: 48px 0;">
-    </div>
+  </div>
+  <div style="height: 100px; padding: 48px 0"></div>
 </div>

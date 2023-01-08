@@ -1,5 +1,5 @@
 <!-- Card view -->
-<div class="ib text-center p-5 animate__animated animate__backInRight" *ngFor="let card of cards">
+<div class="d-inline-block p-5 animate__animated animate__backInRight" *ngFor="let card of cards">
     <scale-card (click)="openModal(card)">
         <ng-container [ngSwitch]="card.img">
             <img alt="Windows" *ngSwitchCase="'windows'" src="assets/images/os/windows.png">
@@ -9,7 +9,7 @@
         </ng-container>
         <h4 class="mt-1">Servername:</h4>
         <p>{{ card.name }}</p>
-        <div class="mt-20">
+        <div class="mt-2">
             <h5>Status</h5>
             <scale-icon-alert-success *ngIf="card?.status; else warningIcon" fill="#00b367" size="24" selected
                 accessibility-title="Online">
@@ -25,8 +25,8 @@
 <!-- Modal view -->
 <scale-modal id="modal" heading="{{ 'details.headline' | translate }}">
     <div class="container">
-        <h3 class="tv-Left">System
-            <span class="pull-right">
+        <h3 class="text-start">System
+            <span class="float-end">
                 <scale-icon-alert-success *ngIf="selectedServer?.status; else warningIcon" fill="#00b367" size="24"
                     selected accessibility-title="Online">
                 </scale-icon-alert-success>
@@ -36,15 +36,15 @@
                 </ng-template>
             </span>
         </h3>
-        <div class="row">
-            <div class="box1">
+        <div class="row text-start">
+            <div class="col-4">
                 <p>Name:</p>
                 <p>{{ "details.system.operating-system" | translate }}</p>
                 <p>{{ "details.system.processor" | translate }}</p>
                 <p>{{ "details.system.memory" | translate }}</p>
                 <p>{{ "details.system.hard-disk-storage" | translate }}</p>
             </div>
-            <div class="box2">
+            <div class="col-8">
                 <p>{{ selectedServer?.name }}</p>
                 <p>{{ selectedServer?.serverDetails?.os }}</p>
                 <p>{{ selectedServer?.serverDetails?.processor }}</p>
@@ -54,24 +54,24 @@
             </div>
         </div>
         <scale-divider></scale-divider>
-        <h3 class="tv-Left mt-2">{{ "details.network.headline" | translate }}</h3>
-        <div class="row">
-            <div class="box1">
+        <h3 class="text-start mt-2">{{ "details.network.headline" | translate }}</h3>
+        <div class="row text-start">
+            <div class="col-4">
                 <p>IPv4:</p>
                 <p>IPv6:</p>
                 <p>{{ "details.network.location" | translate }}</p>
             </div>
-            <div class="box2">
+            <div class="col-8">
                 <p>{{ selectedServer?.serverDetails?.ipv4 }}</p>
                 <p>{{ selectedServer?.serverDetails?.ipv6 }}</p>
                 <p>{{ selectedServer?.serverDetails?.location }}</p>
             </div>
         </div>
         <scale-divider></scale-divider>
-        <h3 class="tv-Left mt-2">{{ "details.applications.title" | translate }}
+        <h3 class="text-start mt-2">{{ "details.applications.title" | translate }}
         </h3>
-        <div class="row">
-            <div class="box3">
+        <div class="row text-start">
+            <div class="col">
                 <scale-table>
                     <table>
                         <thead>

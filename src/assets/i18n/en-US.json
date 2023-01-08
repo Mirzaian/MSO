@@ -11,7 +11,7 @@
   },
   "mainNavigation": {
     "dashboard": "Dashboard",
-    "server": "Server"  
+    "server": "Server"
   },
   "iconNavigation": {
     "search": "Search"
@@ -29,7 +29,8 @@
     "label-mail": "Username",
     "label-password": "Password",
     "submit": "Login",
-    "notification-message": "Hint: Login with your domain password (EMEA1/EMEA2) or as external with ZAM password"
+    "notification-message": "Hint: Login with your domain password (EMEA1/EMEA2) or as external with ZAM password",
+    "notification-error": "Username or Password is wrong"
   },
   "warning": {
     "h1_headline": "Sorry, \n we couldn't find the page.",
@@ -41,7 +42,7 @@
     "headline": "Dashboard"
   },
   "server": {
-    "title": "Dashboard"
+    "title": "Server Overview"
   },
   "details": {
     "headline": "Server information",

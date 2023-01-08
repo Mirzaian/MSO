@@ -8,8 +8,11 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
   email!: string;
   password!: string;
+  notification: boolean = false;
+
   constructor(private router: Router, private userService: UserService, private ngZone: NgZone) { }
 
   ngOnInit() { }
@@ -21,7 +24,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('loginStatus', 'true')
     }
     else {
-      this
+      this.notification = true;
     }
   }
 }
