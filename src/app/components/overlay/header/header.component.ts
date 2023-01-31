@@ -1,6 +1,8 @@
 import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { userData } from 'src/app/models/auth';
+import { DataService } from 'src/app/services/data.service';
 import { UserService } from '../../../services/user.service';
 
 @Component({
@@ -14,41 +16,19 @@ export class HeaderComponent implements OnInit {
   isShown: boolean = false;
   currentLanguage: string = 'de-DE';
   isUserLoggedIn: boolean = false;
-
-  mainNavigation = [
-    { name: "Dashboard", id: "dashboard", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard']) }) }, children: [] },
-    { name: "Server", id: "server", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard/server/overview']) }) }, children: [], }
-  ];
-
-  languageNavigation = [
-    { name: "Deutsch", id: "de-DE", onClick: () => { this.ngZone.run(() => { this.selectLanguage("de-DE") }) } },
-    { name: "Englisch", id: "en-US", onClick: () => { this.ngZone.run(() => { this.selectLanguage("en-US") }) } }
-  ];
-
-  iconNavigation = [
-    { name: "Search", id: "search", onClick: () => { this.ngZone.run(() => { this.isShown = !this.isShown }) }, icon: "action-search" },
-  ];
-
-  userNavigation = [
-    { type: 'userInfo', shortName: 'Kevin', name: 'Kevin Mirzaian', email: 'k.mirzaian@telekom.de' },
-    { type: 'divider' },
-    { type: 'item', name: 'Account Informationen', id: 'user-info', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/account/information']) }) }, icon: 'user-file-user', iconPosition: 'prefix' },
-    { type: 'item', name: 'Einstellungen', id: 'user-settings', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/account/settings']) }) }, icon: 'service-settings', iconPosition: 'prefix' },
-    { type: 'divider' },
-    { type: 'item', name: 'Kundenservice', id: 'user-support', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/support']) }) }, icon: 'service-support', iconPosition: 'prefix' },
-    { type: 'divider' },
-    { type: 'button', name: 'Abmelden', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['/']); }, variant: 'secondary' },
-  ];
+  private user: userData[] = [];
 
   constructor(private router: Router, private ngZone: NgZone, private cdf: ChangeDetectorRef,
-    private translateService: TranslateService, private userService: UserService) {
+    private translateService: TranslateService, private userService: UserService, private dataService: DataService) {
+    this.dataService.getUserData().subscribe((User => { this.user = User; this.loadUserData()}));
     this.translateService.getTranslation(this.currentLanguage).subscribe(() => { this.loadTranslations() })
     translateService.onLangChange.subscribe((languageSettings) => {
       this.currentLanguage = languageSettings.lang;
-      this.loadTranslations();
     })
-    userService.isUserLoggedIn$.subscribe((loginStatus) => this.isUserLoggedIn = loginStatus)
+    userService.isUserLoggedIn$.subscribe((loginStatus) => this.isUserLoggedIn = loginStatus);
   }
+
+
 
   public selectLanguage(event: string) {
     this.translateService.use(event);
@@ -62,6 +42,13 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.userService.logout()
+  }
+
+
+  loadUserData() {
+    this.userNavigation[0].shortName = this.user[0]?.firstname;
+    this.userNavigation[0].name = (this.user[0]?.firstname + " " +this.user[0]?.lastname);
+    this.userNavigation[0].email = this.user[0]?.email;
   }
 
   loadTranslations() {
@@ -78,6 +65,31 @@ export class HeaderComponent implements OnInit {
     this.userNavigation[5].name = this.translateService.instant("userNavigation.user-support");
     this.userNavigation[7].name = this.translateService.instant("userNavigation.logout");
   }
+
+  mainNavigation = [
+    { name: "", id: "dashboard", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard']) }) }, children: [] },
+    { name: "", id: "server", onClick: () => { this.ngZone.run(() => { this.router.navigate(['dashboard/server/overview']) }) }, children: [], }
+  ];
+
+  languageNavigation = [
+    { name: "", id: "de-DE", onClick: () => { this.ngZone.run(() => { this.selectLanguage("de-DE") }) } },
+    { name: "", id: "en-US", onClick: () => { this.ngZone.run(() => { this.selectLanguage("en-US") }) } }
+  ];
+
+  iconNavigation = [
+    { name: "", id: "search", onClick: () => { this.ngZone.run(() => { this.isShown = !this.isShown }) }, icon: "action-search" },
+  ];
+
+  userNavigation = [
+    { type: 'userInfo', shortName: '', name: '', email: '' },
+    { type: 'divider' },
+    { type: 'item', name: '', id: 'user-info', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/account/information']) }) }, icon: 'user-file-user', iconPosition: 'prefix' },
+    { type: 'item', name: '', id: 'user-settings', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/account/settings']) }) }, icon: 'service-settings', iconPosition: 'prefix' },
+    { type: 'divider' },
+    { type: 'item', name: '', id: 'user-support', onClick: () => { this.ngZone.run(() => { this.router.navigate(['/support']) }) }, icon: 'service-support', iconPosition: 'prefix' },
+    { type: 'divider' },
+    { type: 'button', name: '', id: 'logout', onClick: () => { this.logout(); this.router.navigate(['/']); }, variant: 'secondary' },
+  ];
 
   /*
   filter() {

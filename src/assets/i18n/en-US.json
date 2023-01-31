@@ -72,7 +72,9 @@
   "info": {
     "headline": "Account information",
     "sub-title": "Your personal data",
-    "email-address": "E-Mail Address:"
+    "email-address": "E-Mail Address:",
+    "gender": "Gender:",
+    "phoneNumber": "Phone number:"
   },
   "settings": {
     "headline": "Settings",

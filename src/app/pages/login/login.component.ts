@@ -1,6 +1,8 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { UserService } from './../../services/user.service';
 import { Router } from '@angular/router';
-import { UserService } from '../../services/user.service';
+import { HttpClient } from '@angular/common/http';
+import { Component, NgZone, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,22 +11,43 @@ import { UserService } from '../../services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  email!: string;
-  password!: string;
+  public loginForm!: FormGroup
   notification: boolean = false;
 
-  constructor(private router: Router, private userService: UserService, private ngZone: NgZone) { }
+  constructor(private userService: UserService, private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
-  ngOnInit() { }
-
-  login() {
-    if (this.email == "root" && this.password == "123456") {
-      this.ngZone.run(() => { this.router.navigate(['dashboard']) })
-      this.userService.isUserLoggedIn$.next(true)
-      localStorage.setItem('loginStatus', 'true')
-    }
-    else {
-      this.notification = true;
-    }
+  ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      username:[''],
+      password:['']
+    })
   }
+
+  login(){
+    this.http.get<any>("http://localhost:3000/user").subscribe(res => {
+      const user = res.find((a:any) => {
+        return a.username === this.loginForm.value.username && a.password === this.loginForm.value.password
+      });
+      if(user){
+        console.log("Login successful");
+        this.loginForm.reset();
+        this.userService.isUserLoggedIn$.next(true);
+        localStorage.setItem('loginStatus', 'true');
+        this.router.navigate(['dashboard']);
+      } else {
+        console.log("User not found");
+        this.notification = true;
+      }
+     }, err=>{
+        console.log("Something went wrong");
+    })
+  }
+
+    // Logout function to reset the loginStatus and set loginStatus to default false
+    logout() {
+      this.userService.isUserLoggedIn$.next(false)
+      localStorage.removeItem('loginStatus')
+      this.router.navigate([''])
+    }
+
 }

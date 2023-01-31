@@ -16,13 +16,13 @@ export class OverviewComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getAll().subscribe((vmGroup => { this.connections = vmGroup }));
+    this.dataService.getVmGroups().subscribe((vmGroup => { this.connections = vmGroup }));
   }
 
   onClick(vmGroups: vmGroups) {
     console.log(vmGroups.name)
     this.directory = vmGroups;
-    this.dataService.filter(vmGroups.category).subscribe(res => { this.serverlist = res });
+    this.dataService.getVmServerByCategory().subscribe(res => { this.serverlist = res });
   }
 }
 

@@ -10,10 +10,14 @@
     <div class="col-4">
       <h5 class="text-end">Name:</h5>
       <h5 class="text-end">{{ "info.email-address" | translate }}</h5>
+      <h5 class="text-end">{{ "info.gender" | translate }}</h5>
+      <h5 class="text-end">{{ "info.phoneNumber" | translate }}</h5>
     </div>
     <div class="col-4">
-      <h5 class="text-start">Kevin Mirzaian</h5>
-      <h5 class="text-start">k.mirzaian@telekom.de</h5>
+      <h5 class="text-start">{{ user?.[0]?.firstname }} {{ user?.[0]?.lastname }}</h5>
+      <h5 class="text-start">{{ user?.[0]?.email }}</h5>
+      <h5 class="text-start">{{ user?.[0]?.gender }}</h5>
+      <h5 class="text-start">+{{ user?.[0]?.phoneNumber }}</h5>
     </div>
   </div>
   <div style="height: 100px; padding: 48px 0"></div>

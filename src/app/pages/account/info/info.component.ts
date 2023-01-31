@@ -1,3 +1,5 @@
+import { userData } from './../../../models/auth';
+import { DataService } from 'src/app/services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  constructor() { }
+  user: userData[] = [];
+
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getUserData().subscribe((User => { this.user = User}));
   }
-
 }

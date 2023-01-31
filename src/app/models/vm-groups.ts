@@ -38,7 +38,7 @@ export interface serverDetails {
 export interface serverApplications {
     name: string;
     status: string;
-    cpu: string | undefined;
+    cpu: string;
     memory: string;
     action: {
         status: boolean;

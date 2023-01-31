@@ -1,6 +1,6 @@
 <!-- Header -->
 <div class="container">
-  <section class="mt-4 mb-3">
+  <div class="mt-4 mb-3">
     <h1 class="subtitle animate__animated animate__backInDown">
       {{ 'login.subtitle' | translate }}<br>
       <span class="title">{{ 'login.title' | translate }}</span>
@@ -8,19 +8,21 @@
     <p class="tv-info">
       {{ 'login.tv-info' | translate }}
     </p>
-  </section>
+  </div>
   <!-- Content -->
-  <section class="login-form">
+  <form [formGroup]="loginForm" class="col-md-6 offset-md-3" (ngSubmit)="login()">
     <scale-notification-message opened> {{ 'login.notification-message' | translate }}
     </scale-notification-message>
-    <scale-input label="{{ 'login.label-mail' | translate }}"
-      placeholder="Max.mustermann@telekom.de" type="email" required="true" [(ngModel)]="email"></scale-input>
-    <scale-input label="{{ 'login.label-password' | translate }}" type="password" required="true"
-      [(ngModel)]="password"></scale-input>
-    <scale-button class="pull-right" id="submit" (click)="login()">{{ 'login.submit' | translate }}</scale-button>
-  </section>
-  <!-- Notification  -->
-  <scale-notification-toast variant="error" *ngIf="notification" opened>
+    <scale-input formControlName="username" label="{{ 'login.label-mail' | translate }}"
+      placeholder="Max.mustermann@telekom.de" type="username" required="true">
+    </scale-input>
+    <scale-input formControlName="password" label="{{ 'login.label-password' | translate }}" type="password" required="true">
+    </scale-input>
+    <scale-button type="submit" class="pull-right">{{ 'login.submit' | translate }}</scale-button>
+  </form>
+    <!-- Notification  -->
+  <scale-notification-toast *ngIf="notification" variant="error" opened>
     <p slot="header">{{ 'login.notification-error' | translate }}</p>
+    <p slot="body">Benutzername oder Passwort falsch.</p>
   </scale-notification-toast>
 </div>

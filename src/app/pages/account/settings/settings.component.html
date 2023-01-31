@@ -1,4 +1,4 @@
-<div class="container">
+<div class="row">
   <h1 class="mb-3">
     {{ "settings.headline" | translate }}
   </h1>
@@ -7,27 +7,16 @@
     <h3>{{ "settings.headline-2" | translate }}</h3>
     <span>{{ "settings.sub-title" | translate }}</span>
   </div>
-  <div class="row justify-content-evenly py-5">
-    <div class="col-4">
-      <scale-text-field
-        label="{{ 'settings.input-old' | translate }}"
-        type="password"
-        required>
+  <div class="col-md-4 offset-md-4 mt-4 text-center">
+    <form [formGroup]="changePassword">
+      <scale-text-field type="oldPassword" label="{{ 'settings.input-old' | translate }}" required>
       </scale-text-field>
-      <scale-text-field
-        label="{{ 'settings.input-new' | translate }}"
-        type="password"
-        required>
+      <scale-text-field type="newPassword" label="{{ 'settings.input-new' | translate }}" type="password" required>
       </scale-text-field>
-      <scale-text-field
-        label="{{ 'settings.input-confirm' | translate }}"
-        type="password"
-        required>
+      <scale-text-field type="cnewPassword" label="{{ 'settings.input-confirm' | translate }}" type="password" required>
       </scale-text-field>
-      <div class="text-center mt-4">
-        <scale-button>{{ "settings.save" | translate }}</scale-button>
-      </div>
+        <scale-button type="submit" class="mt-4">{{ "settings.save" | translate }}</scale-button>
+    </form>
     </div>
-  </div>
   <div style="height: 100px; padding: 48px 0"></div>
 </div>
